@@ -62,7 +62,7 @@
             <a data-toggle="modal" data-target="#modalSearch"><i id="searchGlyph" class="fa fa-search fa-3x"></i></a>
           </li>
           <li>
-            <a data-toggle="modal" data-target="#modalRegister">Login</a>
+            <a data-toggle="modal" data-target="#loginModal">Login</a>
           </li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -122,83 +122,74 @@
         </div>
       </div>
 
-      <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-         <div class="modal-dialog modal-sm" style="width: 348px;">    
-           <div class="modal-content">
-             <div class="modal-body">
-               <div class="control-group" style="padding-bottom: 18px;">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-               </div>
-               <form data-toggle="validator" role="form" method="post" id="RegisterForm" action="https://canvasxpress.org/cgi-bin/services.pl">
-                 <div class="control-group" style="padding-bottom: 10px;">
-                   <label class="control-label" for="Email">Email</label>
-                   <div class="controls">
-                     <input type="email" class="form-control" id="r_email" name="email" placeholder="Email" required>
-                   </div>
-                 </div>
-                 <div class="control-group" style="padding-bottom: 10px;">
-                   <label class="control-label" for="userid">User Id:</label>
-                   <div class="controls">
-                     <input type="text" class="form-control" id="r_userid" name="userid" data-minlength="5" data-maxlength="18" placeholder="User Id" pattern="[a-zA-Z0-9]+" required>
-                     <em>6-18 Lower Case Characters (no spaces)</em>
+      <div class="modal fade login" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog login animated">
+  	      <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title blue-font" id="exampleModalLabel">Login with</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="box">
+                <div class="content">
+                  <div class="social">
+                    <a class="circle github" href="#">
+                      <i class="fa fa-github fa-fw"></i>
+                    </a>
+                    <a id="google_login" class="circle google" href="#">
+                      <i class="fa fa-google-plus fa-fw"></i>
+                    </a>
+                    <a id="facebook_login" class="circle facebook" href="#">
+                       <i class="fa fa-facebook fa-fw"></i>
+                    </a>
+                  </div>
+                  <div class="division">
+                    <div class="line l"></div>
+                    <span>or</span>
+                    <div class="line r"></div>
+                  </div>
+                  <div class="error"></div>
+                    <div class="form loginBox">
+                      <form method="" action="" accept-charset="UTF-8">
+                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                        <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                        <input class="btn-get-started btn-login" type="button" value="Login" onclick="loginAjax()">
+                      </form>
                     </div>
-                 </div>
-                 <div class="control-group" style="padding-bottom: 10px;">
-                   <label class="control-label" for="password">Password:</label>
-                   <div class="controls">
-                     <input type="password" class="form-control" id="r_password" name="password" data-minlength="6" data-maxlength="18" placeholder="Password" required>
-                     <em>6-18 Characters</em>
-                   </div>
-                 </div>
-                 <div class="control-group" style="padding-bottom: 18px;">
-                   <label class="control-label" for="confirm">Re-Enter Password:</label>
-                   <div class="controls">
-                     <input type="password" class="form-control" id="r_confirm" name="confirm" data-match="#r_password" data-match-error="Whoops, passwords don't match" placeholder="Confirm" required>
-                   </div>
-                 </div>           
-                 <input name="register" type="hidden" id="r_service" value="register">
-                 <div class="form-group">
-                   <button type="submit" class="btn btn-get-started">Register</button>
-                 </div>
-               </form>
-             </div>
-           </div>
-         </div>
-      </div>
-      
-      <div id="modalForgot" class="modal fade" role="dialog">
-         <div class="modal-dialog modal-sm" style="width: 318px;">    
-           <div class="modal-content">
-             <div class="modal-body">
-               <div class="control-group" style="padding-bottom: 18px;">
-                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-               </div>
-               <form data-toggle="validator" role="form" method="post" id="ForgotForm" action="https://canvasxpress.org/cgi-bin/services.pl">
-                 <div class="control-group" style="padding-bottom: 10px;">
-                   <label class="control-label" for="Email">Email address</label>
-                   <div class="controls">
-                     <input type="email" class="form-control" id="f_email" name="email" "placeholder="Email" required>
-                   </div>
-                 </div>
-                 <input name="forgot" type="hidden" id="f_service" value="forgot">
-                 <div class="form-group">
-                   <button type="submit" class="btn btn-primary btn-block">Send Password</button>
-                 </div>
-               </form>
-             </div>
-           </div>
-         </div>
-      </div>
-            
-      <div id="modalMessage" class="modal fade" role="dialog">
-         <div class="modal-dialog modal-sm" style="width: 318px;">    
-           <div class="modal-content">
-             <div class="modal-body">
-               <div id="navMessage"></div>
-             </div>
-           </div>
-         </div>
-      </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <div class="content registerBox" style="display:none;">
+                    <div class="form">
+                      <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                        <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                        <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                        <input class="btn-get-started btn-register" type="button" value="Create account" name="commit">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <div class="forgot login-footer">
+                  <span>Looking to
+                    <a href="javascript: showRegisterForm();">create an account</a>
+                    ?
+                    <a href="javascript: showForgotForm();">Forgot password</a>
+                    ?
+                  </span>
+                </div>
+                <div class="forgot register-footer" style="display:none">
+                  <span>Already have an account?</span>
+                  <a href="javascript: showLoginForm();">Login</a>
+                </div>
+              </div>
+    		</div>
+		  </div>
+		</div>
       
     </div>
   </header><!-- #header -->
