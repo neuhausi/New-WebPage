@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>eStartup Bootstrap Template</title>
+  <title>CanvasXpress</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -27,13 +27,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: eStartup
-    Theme URL: https://bootstrapmade.com/estartup-bootstrap-landing-page-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+  
 </head>
 
 <body>
@@ -42,9 +36,8 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <!--<h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <a href="#body"><img style="width: 10%;" src="img/brand2.png" alt="" title="" /></a>
+        <h1><a href="#body" class="scrollto">CanvasXpress</a></h1>
+        <!-- <a href="#body"><img style="width: 4%;position: fixed;" src="img/brand2.png" alt="" title="" /></a> -->
       </div>
 
       <nav id="nav-menu-container">
@@ -65,18 +58,158 @@
           </li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li>
+            <a data-toggle="modal" data-target="#modalSearch"><i id="searchGlyph" class="fa fa-search fa-3x"></i></a>
+          </li>
+          <li>
+            <a data-toggle="modal" data-target="#modalRegister">Login</a>
+          </li>
         </ul>
       </nav><!-- #nav-menu-container -->
+      
+      <!-- Modal -->
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog" role="document" style="width: 800px;">    
+          <div class="modal-content" style="overflow-y: scroll; max-height: 800px;">
+            <div class="modal-header">
+              <h5 class="modal-title blue-font" id="exampleModalLabel">Search CanvasXpress</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <style type="text/css">
+                .reset-box-sizing, .reset-box-sizing *, .reset-box-sizing *:before, .reset-box-sizing *:after, .gsc-inline-block {
+                  -webkit-box-sizing: content-box;
+                  -moz-box-sizing: content-box;
+                  box-sizing: content-box;
+                }
+                input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
+                  box-sizing: content-box;
+                  line-height: normal;
+                }
+                .gsc-results-wrapper-overlay {
+                  width: 100% !important;
+                  position: static !important;
+                  padding: 0 !important;
+                  overflow: visible !important;
+                  box-shadow: none !important;
+                }
+                .gsc-modal-background-image-visible {
+                  display: none !important;
+                }
+                .gsc-results-close-btn-visible {
+                  display: none;
+                }
+              </style>
+              <script>
+                (function() {
+                  var cx = '017553474198412024421:c_qxiweliao';
+                  var gcse = document.createElement('script');
+                  gcse.type = 'text/javascript';
+                  gcse.async = true;
+                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(gcse, s);
+                })();
+              </script>
+              <gcse:search></gcse:search>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn-get-started" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+         <div class="modal-dialog modal-sm" style="width: 348px;">    
+           <div class="modal-content">
+             <div class="modal-body">
+               <div class="control-group" style="padding-bottom: 18px;">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <form data-toggle="validator" role="form" method="post" id="RegisterForm" action="https://canvasxpress.org/cgi-bin/services.pl">
+                 <div class="control-group" style="padding-bottom: 10px;">
+                   <label class="control-label" for="Email">Email</label>
+                   <div class="controls">
+                     <input type="email" class="form-control" id="r_email" name="email" placeholder="Email" required>
+                   </div>
+                 </div>
+                 <div class="control-group" style="padding-bottom: 10px;">
+                   <label class="control-label" for="userid">User Id:</label>
+                   <div class="controls">
+                     <input type="text" class="form-control" id="r_userid" name="userid" data-minlength="5" data-maxlength="18" placeholder="User Id" pattern="[a-zA-Z0-9]+" required>
+                     <em>6-18 Lower Case Characters (no spaces)</em>
+                    </div>
+                 </div>
+                 <div class="control-group" style="padding-bottom: 10px;">
+                   <label class="control-label" for="password">Password:</label>
+                   <div class="controls">
+                     <input type="password" class="form-control" id="r_password" name="password" data-minlength="6" data-maxlength="18" placeholder="Password" required>
+                     <em>6-18 Characters</em>
+                   </div>
+                 </div>
+                 <div class="control-group" style="padding-bottom: 18px;">
+                   <label class="control-label" for="confirm">Re-Enter Password:</label>
+                   <div class="controls">
+                     <input type="password" class="form-control" id="r_confirm" name="confirm" data-match="#r_password" data-match-error="Whoops, passwords don't match" placeholder="Confirm" required>
+                   </div>
+                 </div>           
+                 <input name="register" type="hidden" id="r_service" value="register">
+                 <div class="form-group">
+                   <button type="submit" class="btn btn-get-started">Register</button>
+                 </div>
+               </form>
+             </div>
+           </div>
+         </div>
+      </div>
+      
+      <div id="modalForgot" class="modal fade" role="dialog">
+         <div class="modal-dialog modal-sm" style="width: 318px;">    
+           <div class="modal-content">
+             <div class="modal-body">
+               <div class="control-group" style="padding-bottom: 18px;">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+               </div>
+               <form data-toggle="validator" role="form" method="post" id="ForgotForm" action="https://canvasxpress.org/cgi-bin/services.pl">
+                 <div class="control-group" style="padding-bottom: 10px;">
+                   <label class="control-label" for="Email">Email address</label>
+                   <div class="controls">
+                     <input type="email" class="form-control" id="f_email" name="email" "placeholder="Email" required>
+                   </div>
+                 </div>
+                 <input name="forgot" type="hidden" id="f_service" value="forgot">
+                 <div class="form-group">
+                   <button type="submit" class="btn btn-primary btn-block">Send Password</button>
+                 </div>
+               </form>
+             </div>
+           </div>
+         </div>
+      </div>
+            
+      <div id="modalMessage" class="modal fade" role="dialog">
+         <div class="modal-dialog modal-sm" style="width: 318px;">    
+           <div class="modal-content">
+             <div class="modal-body">
+               <div id="navMessage"></div>
+             </div>
+           </div>
+         </div>
+      </div>
+      
     </div>
   </header><!-- #header -->
 
   <!--==========================
     Hero Section
-  ============================
+  ============================-->
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
-      <h1>Welcome to eStartups</h1>
-      <h2>Elegant Bootstrap Template for Startups, Apps &amp; more...</h2>
+      <h1>Welcome to CanvasXpress</h1>
+      <h2>Data analytics for Reproducible Research</h2>
       <img src="img/hero-img.png" alt="Hero Imgs">
       <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
       <div class="btns">
@@ -86,23 +219,6 @@
       </div>
     </div>
   </section><!-- #hero -->
-
-  <!--==========================
-    Hero Section
-  ============================-->
-  <section id="hero" class="wow fadeIn">
-    <div class="hero-container">
-      <img style="position: absolute;" src="img/bg-blue.png" alt="Hero Imgs">
-      <img style="position: absolute;" src="img/brand2.png" alt="Hero Imgs">
-      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-    </div>
-  </section><!-- #hero -->
-
-
-
-
-
-
 
   <!--==========================
     Get Started Section
