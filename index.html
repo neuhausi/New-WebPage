@@ -70,8 +70,8 @@
       
       <!-- Modal -->
       <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-        <div class="modal-dialog" role="document" style="width: 800px;">    
-          <div class="modal-content" style="overflow-y: scroll; max-height: 800px;">
+        <div class="modal-dialog" role="document">    
+          <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title blue-font" id="exampleModalLabel">Search CanvasXpress</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -158,10 +158,11 @@
                 <div class="content loginBox">
                   <div class="error"></div>
                   <div class="form loginBox">
-                    <form method="" action="" accept-charset="UTF-8">
-                      <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                      <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                      <input class="btn-get-started btn-login" type="button" value="Login" onclick="loginAjax()">
+                    <form method="post" id="RegisterForm" action="https://canvasxpress.org/cgi-bin/services.pl" accept-charset="UTF-8">
+                      <input id="s_email" class="form-control" type="text" placeholder="Email" name="email">
+                      <input id="s_password" class="form-control" type="password" placeholder="Password" name="password">
+                      <input id="s_service" class="form-control" type="hidden" name="signin" value="signin">
+                      <button class="btn-get-started btn-login" type="submit">Login</button>
                     </form>
                   </div>
                 </div>
@@ -169,11 +170,13 @@
               <div class="box">
                 <div class="content registerBox" style="display:none;">
                   <div class="form">
-                    <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
-                      <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                      <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                      <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
-                      <input class="btn-get-started btn-register" type="button" value="Create account" name="commit">
+                    <form data-toggle="validator" role="form" method="post" id="RegisterForm" action="https://canvasxpress.org/cgi-bin/services.pl" accept-charset="UTF-8">
+                      <input id="r_email" class="form-control" type="email" placeholder="Email" name="email" required>
+                      <input id="r_userid" class="form-control" type="text" placeholder="User Id" name="userid" data-minlength="5" data-maxlength="18" pattern="[a-zA-Z0-9]+" required>
+                      <input id="r_password" class="form-control" type="password" placeholder="Password" name="password" data-minlength="6" data-maxlength="18" required>
+                      <input id="r_confirm" class="form-control" type="password" placeholder="Repeat Password" name="confirm" data-match="#r_password" data-match-error="Whoops, passwords don't match" required>
+                      <input id="r_service" class="form-control" type="hidden" name="register" value="register">
+                      <button class="btn-get-started btn-register" type="submit">Create account</button>
                     </form>
                   </div>
                 </div>                  
@@ -181,9 +184,10 @@
               <div class="box">
                 <div class="content forgotBox" style="display:none;">
                   <div class="form">
-                    <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
-                      <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                      <input class="btn-get-started btn-register" type="button" value="Request password" name="commit">
+                    <form data-toggle="validator" role="form" method="post" id="ForgotForm" action="https://canvasxpress.org/cgi-bin/services.pl" accept-charset="UTF-8">
+                      <input id="f_email" class="form-control" type="email" placeholder="Email" name="email" required>
+                      <input id="f_service" class="form-control" type="hidden" name="forgot" value="forgot">
+                      <button class="btn-get-started btn-forgot" type="submit">Request password</button>
                     </form>
                   </div>
                 </div>                  

@@ -1378,6 +1378,12 @@ body.mobile-nav-active #mobile-nav-toggle i {
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
+  width: 800px;
+}
+
+.modal .modal-content {
+  overflow-y: scroll; 
+  max-height: 800px;
 }
 
 .modal-open .modal,a:focus {
@@ -1421,7 +1427,6 @@ body {
 /*********************
   LOGIN
 **********************/
-
 .animated {
   -webkit-animation-duration: 1s;
 	   -moz-animation-duration: 1s;
@@ -1484,23 +1489,23 @@ body {
 	-o-animation-name: shake;
 	animation-name: shake;
 }
-
+/* modal compartments */
 .login .modal-dialog{
-    width: 350px;
+	width: 350px;
+}
+.login .modal-header {
+    border: 0 none;
+    padding: 15px 15px 15px;
+}
+.login .modal-body{
+
 }
 .login .modal-footer{
     border-top: 0;
     margin-top: 0px;
     padding: 10px 20px 20px;
 }
-.login .modal-header {
-    border: 0 none;
-    padding: 15px 15px 15px;
-/*     padding: 11px 15px; */
-}
-.login .modal-body{
-/*     background-color: #eeeeee; */
-}
+/* modal social */
 .login .division {
     float: none;
     margin: 0 auto 18px;
@@ -1530,7 +1535,6 @@ body {
     margin: 0 auto 30px;
     text-align: center;
 }
-
 .login .social .circle{
     background-color: #EEEEEE;
     color: #FFFFFF;
@@ -1561,22 +1565,14 @@ body {
 .login .github:hover{
     background-color: #4D4D4d;;
 }
-.login .forgot {
-    color: #797979;
-    margin-left: 0;
-    overflow: hidden;
-    text-align: center;
-    width: 100%;
-}
-.login .btn-login, .registerBox .btn-register{
+/* modal buttons */
+.loginBox .btn-login, .registerBox .btn-register, .forgotBox .btn-forgot{
     display: block;
     margin: 0 auto;
     padding: 15px 50px;
     width: 100%;
 }
-.login .btn-login:hover, .registerBox .btn-register:hover{
-
-}
+/* modal form */
 .login .form-control{
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.09);
@@ -1591,7 +1587,7 @@ body {
     background-color: rgba(0,0,0,0.23);
     color: #FFFFFF;
 }
-.login .box .form input[type="text"], .login .box .form input[type="password"] {
+.login .box .form input[type="text"], .login .box .form input[type="email"], .login .box .form input[type="password"] {
     border-radius: 3px;
     border: none;
     color: #333333;
@@ -1601,8 +1597,7 @@ body {
     padding: 13px 12px;
     width: 100%;
 }
-
-
+/* modal UI */
 @media (max-width:400px){
     .login .modal-dialog{
         width: 100%;
