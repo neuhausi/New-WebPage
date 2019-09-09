@@ -378,6 +378,7 @@ span {
   outline: none;
   letter-spacing: 0;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .nav-menu li:hover > a, .nav-menu > .menu-active > a {

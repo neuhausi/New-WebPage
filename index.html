@@ -33,6 +33,7 @@
 <body>
 
   <header id="header" class="header header-hide">
+
     <div class="container">
 
       <div id="logo" class="pull-left">
@@ -62,7 +63,7 @@
             <a data-toggle="modal" data-target="#modalSearch"><i id="searchGlyph" class="fa fa-search fa-3x"></i></a>
           </li>
           <li>
-            <a data-toggle="modal" data-target="#loginModal">Login</a>
+            <a data-toggle="modal" data-target="#modalLogin">Login</a>
           </li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -122,7 +123,8 @@
         </div>
       </div>
 
-      <div class="modal fade login" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+      <!-- Login/Register -->
+      <div class="modal fade login" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
         <div class="modal-dialog login animated">
   	      <div class="modal-content">
             <div class="modal-header">
@@ -170,7 +172,17 @@
                         <input class="btn-get-started btn-register" type="button" value="Create account" name="commit">
                       </form>
                     </div>
-                  </div>
+                  </div>                  
+                </div>                
+                <div class="box">
+                  <div class="content forgotBox" style="display:none;">
+                    <div class="form">
+                      <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                        <input class="btn-get-started btn-register" type="button" value="Request password" name="commit">
+                      </form>
+                    </div>
+                  </div>                  
                 </div>
               </div>
               <div class="modal-footer">
@@ -178,7 +190,7 @@
                   <span>Looking to
                     <a href="javascript: showRegisterForm();">create an account</a>
                     ?
-                    <a href="javascript: showForgotForm();">Forgot password</a>
+                    <a href="javascript: hideLoginRegisterForm();">Forgot password</a>
                     ?
                   </span>
                 </div>
@@ -192,6 +204,7 @@
 		</div>
       
     </div>
+
   </header><!-- #header -->
 
   <!--==========================
