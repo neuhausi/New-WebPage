@@ -136,35 +136,40 @@ jQuery(document).ready(function( $ ) {
 });
 
 function showRegisterForm(){
-  $('.loginBox').fadeOut('fast',function(){
-      $('.registerBox').fadeIn('fast');
-      $('.login-footer').fadeOut('fast',function(){
-          $('.register-footer').fadeIn('fast');
-      });
-      $('.modal-title').html('Register with');
-  }); 
-  $('.error').removeClass('alert alert-danger').html('');
-     
+	$('#modalLogin .socialBox').fadeIn('fast');
+	$('#modalLogin .loginBox').fadeOut('fast', function () {	
+    $('#modalLogin .forgotBox').fadeOut('fast');
+    $('#modalLogin .registerBox').fadeIn('fast');
+    $('#modalLogin .login-footer').fadeOut('fast', function () {
+    	$('#modalLogin .register-footer').fadeIn('fast');
+    });
+	});
+	$('.modal-title').html('Register with');
+  $('.error').removeClass('alert alert-danger').html('');     
 }
+
 function showLoginForm(){
-  $('#modalLogin .registerBox').fadeOut('fast',function(){
-      $('.loginBox').fadeIn('fast');
-      $('.register-footer').fadeOut('fast',function(){
-          $('.login-footer').fadeIn('fast');    
-      });      
-      $('.modal-title').html('Login with');
-  });       
+	$('#modalLogin .socialBox').fadeIn('fast');
+  $('#modalLogin .registerBox').fadeOut('fast', function (){
+    $('#modalLogin .forgotBox').fadeOut('fast');
+    $('#modalLogin .loginBox').fadeIn('fast');
+    $('#modalLogin .register-footer').fadeOut('fast', function () {        	
+      $('#modalLogin .login-footer').fadeIn('fast');
+    });	
+	});
+  $('.modal-title').html('Login with');
   $('.error').removeClass('alert alert-danger').html(''); 
 }
 
-function hideLoginRegisterForm(){
-  $('#modalLogin .registerBox').fadeOut('fast',function(){
-    $('.forgotBox').fadeIn('fast');
-    $('.login-footer').fadeOut('fast',function(){
-        $('.forgot-footer').fadeIn('fast');    
-    });      
-    $('.modal-title').html('Enter email');
-  });       
-  $('.error').removeClass('alert alert-danger').html(''); 
-
+function showForgotForm(){
+	$('#modalLogin .socialBox').fadeOut('fast');
+  $('#modalLogin .loginBox').fadeOut('fast', function () {
+    $('#modalLogin .registerBox').fadeOut('fast');
+    $('#modalLogin .forgotBox').fadeIn('fast');
+    $('#modalLogin .login-footer').fadeOut('fast', function () {
+      $('#modalLogin .register-footer').fadeIn('fast');
+    });
+  });
+  $('.modal-title').html('Enter email');
+  $('.error').removeClass('alert alert-danger').html('');
 }
