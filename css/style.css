@@ -133,6 +133,7 @@ span {
 
 .back-to-top:hover {
   background: #fff;
+  border: 1px solid #4575b4;
   color: #4575b4;
 }
 
@@ -1256,10 +1257,11 @@ body.mobile-nav-active #mobile-nav-toggle i {
 
 #contact .social-links a:hover {
   background: #fff;
+  border: 1px solid #4575b4;
   color: #4575b4;
 }
 
-#contact .form #sendmessage {
+#contact .form #c_sendmessage {
   color: #4575b4;
   border: 1px solid #4575b4;
   display: none;
@@ -1269,7 +1271,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   margin-bottom: 15px;
 }
 
-#contact .form #errormessage {
+#contact .form #c_errormessage {
   color: red;
   display: none;
   border: 1px solid red;
@@ -1279,7 +1281,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   margin-bottom: 15px;
 }
 
-#contact .form #sendmessage.show, #contact .form #errormessage.show, #contact .form .show {
+#contact .form #c_sendmessage.show, #contact .form #c_errormessage.show, #contact .form .show {
   display: block;
 }
 
@@ -1383,36 +1385,96 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 /***********************
-  MODAL
+  modals
 ************************/
+.animated {
+  -webkit-animation-duration: 1s;
+     -moz-animation-duration: 1s;
+       -o-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+     -moz-animation-fill-mode: both;
+       -o-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
 
-.modal { 
+.animated.hinges {
+  -webkit-animation-duration: 2s;
+     -moz-animation-duration: 2s;
+       -o-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.animated.slow {
+  -webkit-animation-duration: 3s;
+     -moz-animation-duration: 3s;
+       -o-animation-duration: 3s;
+          animation-duration: 3s;
+}
+
+.animated.snail {
+  -webkit-animation-duration: 4s;
+     -moz-animation-duration: 4s;
+       -o-animation-duration: 4s;
+          animation-duration: 4s;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {-webkit-transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
+}
+
+@-moz-keyframes shake {
+  0%, 100% {-moz-transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
+}
+
+@-o-keyframes shake {
+  0%, 100% {-o-transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
+}
+
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
+
+.shake {
+  -webkit-animation-name: shake;
+  -moz-animation-name: shake;
+  -o-animation-name: shake;
+  animation-name: shake;
+}
+
+#modals .modal { 
   background: rgba(000, 000, 000, 0.8); 
   min-height: 1000000px;
   overflow-y: auto !important; 
 }
 
-.modal .modal-dialog {
+#modals .modal .modal-dialog {
   max-width: 95%;
   margin-left: auto;
   margin-right: auto;
-  width: 800px;
 }
 
-.modal .modal-content {
+#modals .modal .modal-content {
   overflow-y: scroll; 
-  max-height: 800px;
 }
 
-.modal-open .modal,a:focus {
+#modals .modal-open .modal,a:focus {
   outline: none !important;
 }
 
-.modal-open {
+#modals .modal-open {
   padding-right: 0px !important;
 }
 
-.blue-font {
+#modals .modal .modal-title {
   color: #4575b4;
 }
 
@@ -1420,7 +1482,7 @@ body {
   padding-right: 0 !important;
 }
 
-.btn-get-started {
+#modals .btn {
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     font-weight: 400;
@@ -1437,94 +1499,30 @@ body {
     text-decoration: none;
 }
 
-.btn-get-started:hover {
+#modals .btn:hover {
   background: #4575b4;
   color: #fff;
 }
 
-/*********************
-  LOGIN
-**********************/
-.animated {
-  -webkit-animation-duration: 1s;
-	   -moz-animation-duration: 1s;
-	     -o-animation-duration: 1s;
-	        animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	   -moz-animation-fill-mode: both;
-	     -o-animation-fill-mode: both;
-	        animation-fill-mode: both;
+/********************
+ search
+*********************/
+
+#search .modal-dialog {
+  width: 800px;
+}
+#search .modal-content {
+  max-height: 800px;
 }
 
-.animated.hinges {
-	-webkit-animation-duration: 2s;
-	   -moz-animation-duration: 2s;
-	     -o-animation-duration: 2s;
-	        animation-duration: 2s;
-}
+/********************
+ account
+*********************/
 
-.animated.slow {
-	-webkit-animation-duration: 3s;
-	   -moz-animation-duration: 3s;
-	     -o-animation-duration: 3s;
-	        animation-duration: 3s;
+#account .modal-dialog {
+  width: 350px;
 }
-
-.animated.snail {
-	-webkit-animation-duration: 4s;
-	   -moz-animation-duration: 4s;
-	     -o-animation-duration: 4s;
-	        animation-duration: 4s;
-}
-
-@-webkit-keyframes shake {
-	0%, 100% {-webkit-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);}
-}
-
-@-moz-keyframes shake {
-	0%, 100% {-moz-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-moz-transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {-moz-transform: translateX(10px);}
-}
-
-@-o-keyframes shake {
-	0%, 100% {-o-transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {-o-transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {-o-transform: translateX(10px);}
-}
-
-@keyframes shake {
-	0%, 100% {transform: translateX(0);}
-	10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
-	20%, 40%, 60%, 80% {transform: translateX(10px);}
-}
-
-.shake {
-	-webkit-animation-name: shake;
-	-moz-animation-name: shake;
-	-o-animation-name: shake;
-	animation-name: shake;
-}
-/* modal compartments */
-.login .modal-dialog{
-	width: 350px;
-}
-.login .modal-header {
-    border: 0 none;
-    padding: 15px 15px 15px;
-}
-.login .modal-body{
-
-}
-.login .modal-footer{
-    border-top: 0;
-    margin-top: 0px;
-    padding: 10px 20px 20px;
-}
-/* modal social */
-.login .division {
+#account .division {
     float: none;
     margin: 0 auto 18px;
     overflow: hidden;
@@ -1532,28 +1530,28 @@ body {
     text-align: center;
     width: 100%;
 }
-.login .division .line {
+#account .division .line {
     border-top: 1px solid #DFDFDF;
     position: absolute;
     top: 10px;
     width: 34%;
 }
-.login .division .line.l {
+#account .division .line.l {
     left: 0;
 }
-.login .division .line.r {
+#account .division .line.r {
     right: 0;
 }
-.login .division span {
+#account .division span {
     color: #424242;
     font-size: 17px;
 }
-.login .box .social {
+#account .box .social {
     float: none;
     margin: 0 auto 30px;
     text-align: center;
 }
-.login .social .circle{
+#account .social .circle{
     background-color: #EEEEEE;
     color: #FFFFFF;
     border-radius: 100px;
@@ -1561,63 +1559,79 @@ body {
     margin: 0 17px;
     padding: 15px;
 }
-.login .social .circle .fa{
+#account .social .circle .fa{
     font-size: 16px;
 }
-.login .social .facebook{
+#account .social .facebook{
     background-color: #455CA8;
     color: #FFFFFF;
 }
-.login .social .google{
+#account .social .google{
     background-color: #F74933;
 }
-.login .social .github{
+#account .social .github{
     background-color: #403A3A;
 }
-.login .facebook:hover{
+#account .facebook:hover{
     background-color: #6E83CD;
 }
-.login .google:hover{
+#account .google:hover{
     background-color: #FF7566;
 }
-.login .github:hover{
+#account .github:hover{
     background-color: #4D4D4d;;
 }
-/* modal buttons */
-.loginBox .btn-login, .registerBox .btn-register, .forgotBox .btn-forgot, .btn-message{
-    display: block;
-    margin: 0 auto;
-    padding: 15px 50px;
-    width: 100%;
+
+#account .form #l_sendmessage, #account .form #r_sendmessage, #account .form #f_sendmessage {
+  color: #4575b4;
+  border: 1px solid #4575b4;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
-/* modal form */
-.login .form-control{
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.09);
-    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
-    color: #FFFFFF;
+
+#account .form #l_errormessage, #account .form #r_errormessage, #account .form #f_errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
-.login .form-control:hover{
-    background-color: rgba(0,0,0,.16);
+
+#account .form #l_sendmessage.show, #account .form #r_sendmessage.show, #account .form #f_sendmessage.show, #account .form #l_errormessage.show, #account .form #r_errormessage.show, #account .form #f_errormessage.show, #account .form .show  {
+  display: block;
 }
-.login .form-control:focus{
-    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
-    background-color: rgba(0,0,0,0.23);
-    color: #FFFFFF;
+
+#account .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
 }
-.login .box .form input[type="text"], .login .box .form input[type="email"], .login .box .form input[type="password"] {
-    border-radius: 3px;
-    border: none;
-    color: #333333;
-    font-size: 16px;
-    height: 46px;
-    margin-bottom: 5px;
-    padding: 13px 12px;
-    width: 100%;
+
+#contact .form input, #contact .form textarea {
+  border-radius: 3;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 12px 10px;
+  line-height: 1;
 }
+
+
+
+
+
+
+
+
 /* modal UI */
 @media (max-width:400px){
-    .login .modal-dialog{
+    .modal-dialog{
         width: 100%;
     }
 }

@@ -136,39 +136,39 @@ jQuery(document).ready(function( $ ) {
 });
 
 function showRegisterForm(){
-	$('#modalLogin .socialBox').fadeIn('fast');
-	$('#modalLogin .loginBox').fadeOut('fast', function () {	
-    $('#modalLogin .forgotBox').fadeOut('fast');
-    $('#modalLogin .registerBox').fadeIn('fast');
-    $('#modalLogin .login-footer').fadeOut('fast', function () {
-    	$('#modalLogin .register-footer').fadeIn('fast');
-    });
+	$('#social').fadeIn('fast');
+	$('#login').fadeOut('fast', function () {	
+    $('#forgot').fadeOut('fast');
+    $('#register').fadeIn('fast');
+    $('#create-forgot-footer').fadeOut('fast', function () {        	
+      $('#login-footer').fadeIn('fast');
+    });	
 	});
 	$('.modal-title').html('Register with');
   $('.error').removeClass('alert alert-danger').html('');     
 }
 
 function showLoginForm(){
-	$('#modalLogin .socialBox').fadeIn('fast');
-  $('#modalLogin .registerBox').fadeOut('fast', function (){
-    $('#modalLogin .forgotBox').fadeOut('fast');
-    $('#modalLogin .loginBox').fadeIn('fast');
-    $('#modalLogin .register-footer').fadeOut('fast', function () {        	
-      $('#modalLogin .login-footer').fadeIn('fast');
-    });	
+	$('#social').fadeIn('fast');
+  $('#register').fadeOut('fast', function (){
+    $('#forgot').fadeOut('fast');
+    $('#login').fadeIn('fast');
+    $('#login-footer').fadeOut('fast', function () {
+    	$('#create-forgot-footer').fadeIn('fast');
+    });
 	});
   $('.modal-title').html('Login with');
   $('.error').removeClass('alert alert-danger').html(''); 
 }
 
 function showForgotForm(){
-	$('#modalLogin .socialBox').fadeOut('fast');
-  $('#modalLogin .loginBox').fadeOut('fast', function () {
-    $('#modalLogin .registerBox').fadeOut('fast');
-    $('#modalLogin .forgotBox').fadeIn('fast');
-    $('#modalLogin .login-footer').fadeOut('fast', function () {
-      $('#modalLogin .register-footer').fadeIn('fast');
-    });
+	$('#social').fadeOut('fast');
+  $('#login').fadeOut('fast', function () {
+    $('#register').fadeOut('fast');
+    $('#forgot').fadeIn('fast');
+    $('#create-forgot-footer').fadeOut('fast', function () {        	
+      $('#login-footer').fadeIn('fast');
+    });	
   });
   $('.modal-title').html('Enter email');
   $('.error').removeClass('alert alert-danger').html('');

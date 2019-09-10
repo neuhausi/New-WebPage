@@ -1,974 +1,1031 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>CanvasXpress</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+<meta charset="utf-8">
+<title>CanvasXpress</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="" name="keywords">
+<meta content="" name="description">
 
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Favicons -->
+<link href="img/favicon.png" rel="icon">
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
 
-  <!-- Bootstrap css -->
-  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap css -->
+<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+<!-- Libraries CSS Files -->
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/modal-video/css/modal-video.min.css" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-  
+<!-- Main Stylesheet File -->
+<link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-  <header id="header" class="header header-hide">
+	<header id="header" class="header header-hide">
 
-    <div class="container">
+		<div class="container">
 
-      <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto">CanvasXpress</a></h1>
-        <!-- <a href="#body"><img style="width: 4%;position: fixed;" src="img/brand2.png" alt="" title="" /></a> -->
-      </div>
+			<div id="logo" class="pull-left">
+				<h1>
+					<a href="#body" class="scrollto">CanvasXpress</a>
+				</h1>
+				<!-- <a href="#body"><img style="width: 4%;position: fixed;" src="img/brand2.png" alt="" title="" /></a> -->
+			</div>
 
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#about-us">About</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#screenshots">Screenshots</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li>
-            <a data-toggle="modal" data-target="#modalSearch"><i id="searchGlyph" class="fa fa-search fa-3x"></i></a>
-          </li>
-          <li>
-            <a data-toggle="modal" data-target="#modalLogin">Login</a>
-          </li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
-      
-      <!-- Modal -->
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-        <div class="modal-dialog" role="document">    
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title blue-font" id="exampleModalLabel">Search CanvasXpress</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <style type="text/css">
-                .reset-box-sizing, .reset-box-sizing *, .reset-box-sizing *:before, .reset-box-sizing *:after, .gsc-inline-block {
-                  -webkit-box-sizing: content-box;
-                  -moz-box-sizing: content-box;
-                  box-sizing: content-box;
-                }
-                input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gsc-search-button {
-                  box-sizing: content-box;
-                  line-height: normal;
-                }
-                .gsc-results-wrapper-overlay {
-                  width: 100% !important;
-                  position: static !important;
-                  padding: 0 !important;
-                  overflow: visible !important;
-                  box-shadow: none !important;
-                }
-                .gsc-modal-background-image-visible {
-                  display: none !important;
-                }
-                .gsc-results-close-btn-visible {
-                  display: none;
-                }
-              </style>
-              <script>
-                (function() {
-                  var cx = '017553474198412024421:c_qxiweliao';
-                  var gcse = document.createElement('script');
-                  gcse.type = 'text/javascript';
-                  gcse.async = true;
-                  gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
-                  var s = document.getElementsByTagName('script')[0];
-                  s.parentNode.insertBefore(gcse, s);
-                })();
-              </script>
-              <gcse:search></gcse:search>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn-get-started" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+			<nav id="nav-menu-container">
+				<ul class="nav-menu">
+					<li class="menu-active"><a href="#hero">Home</a></li>
+					<li><a href="#about-us">About</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#screenshots">Screenshots</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#pricing">Pricing</a></li>
+					<li class="menu-has-children"><a href="">Drop Down</a>
+						<ul>
+							<li><a href="#">Drop Down 1</a></li>
+							<li><a href="#">Drop Down 3</a></li>
+							<li><a href="#">Drop Down 4</a></li>
+							<li><a href="#">Drop Down 5</a></li>
+						</ul></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a data-toggle="modal" data-target="#search"><i id="searchGlyph" class="fa fa-search fa-3x"></i></a></li>
+					<li><a data-toggle="modal" data-target="#account">Login</a></li>
+				</ul>
+			</nav>
+			<!-- #nav-menu-container -->
 
-      <!-- Login/Register -->
-      <div class="modal fade login" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
-        <div class="modal-dialog login animated">
-  	      <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title blue-font" id="exampleModalLabel">Login with</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="box">
-                <div class="content socialBox">
-                  <div class="social">
-                    <a class="circle github" href="#">
-                      <i class="fa fa-github fa-fw"></i>
-                    </a>
-                    <a id="google_login" class="circle google" href="#">
-                      <i class="fa fa-google-plus fa-fw"></i>
-                    </a>
-                    <a id="facebook_login" class="circle facebook" href="#">
-                       <i class="fa fa-facebook fa-fw"></i>
-                    </a>
-                  </div>
-                  <div class="division">
-                    <div class="line l"></div>
-                    <span>or</span>
-                    <div class="line r"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div class="content loginBox">
-                  <div class="error"></div>
-                  <div class="form loginBox">
-                    <form method="post" id="RegisterForm" action="https://canvasxpress.org/cgi-bin/services.pl" accept-charset="UTF-8">
-                      <input id="s_email" class="form-control" type="text" placeholder="Email" name="email">
-                      <input id="s_password" class="form-control" type="password" placeholder="Password" name="password">
-                      <input id="s_service" class="form-control" type="hidden" name="signin" value="signin">
-                      <button class="btn-get-started btn-login" type="submit">Login</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-              <div class="box">
-                <div class="content registerBox" style="display:none;">
-                  <div class="form">
-                    <form data-toggle="validator" role="form" method="post" id="RegisterForm" action="https://canvasxpress.org/cgi-bin/services.pl" accept-charset="UTF-8">
-                      <input id="r_email" class="form-control" type="email" placeholder="Email" name="email" required>
-                      <input id="r_userid" class="form-control" type="text" placeholder="User Id" name="userid" data-minlength="5" data-maxlength="18" pattern="[a-zA-Z0-9]+" required>
-                      <input id="r_password" class="form-control" type="password" placeholder="Password" name="password" data-minlength="6" data-maxlength="18" required>
-                      <input id="r_confirm" class="form-control" type="password" placeholder="Repeat Password" name="confirm" data-match="#r_password" data-match-error="Whoops, passwords don't match" required>
-                      <input id="r_service" class="form-control" type="hidden" name="register" value="register">
-                      <button class="btn-get-started btn-register" type="submit">Create account</button>
-                    </form>
-                  </div>
-                </div>                  
-              </div>                
-              <div class="box">
-                <div class="content forgotBox" style="display:none;">
-                  <div class="form">
-                    <form data-toggle="validator" role="form" method="post" id="ForgotForm" action="https://canvasxpress.org/cgi-bin/services.pl" accept-charset="UTF-8">
-                      <input id="f_email" class="form-control" type="email" placeholder="Email" name="email" required>
-                      <input id="f_service" class="form-control" type="hidden" name="forgot" value="forgot">
-                      <button class="btn-get-started btn-forgot" type="submit">Request password</button>
-                    </form>
-                  </div>
-                </div>                  
-              </div>
-            </div>
-            <div class="modal-footer">
-              <div class="forgot login-footer">
-                <span>Create account?</span>
-                <a href="javascript: showRegisterForm();">Register</a><br>
-                <span>Forgot passsword?</span>
-                <a href="javascript: showForgotForm();">Request</a>
-              </div>
-              <div class="forgot register-footer" style="display:none">
-                <span>Already have an account?</span>
-                <a href="javascript: showLoginForm();">Login</a>
-                <br>
-              </div>
-    		</div>
-		  </div>
-		</div>
-      
-    </div>
+			<!-- Modals -->
 
-  </header><!-- #header -->
+			<div id="modals">
 
-  <!--==========================
+        <!-- Search -->
+				<div id="search" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true" data-backdrop="false">
+					<div class="modal-dialog animated" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="searchModalLabel">Search CanvasXpress</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<style type="text/css">
+.reset-box-sizing, .reset-box-sizing *, .reset-box-sizing *:before,
+	.reset-box-sizing *:after, .gsc-inline-block {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
+	.gsc-input-box-focus, .gsc-search-button {
+	box-sizing: content-box;
+	line-height: normal;
+}
+
+.gsc-results-wrapper-overlay {
+	width: 100% !important;
+	position: static !important;
+	padding: 0 !important;
+	overflow: visible !important;
+	box-shadow: none !important;
+}
+
+.gsc-modal-background-image-visible {
+	display: none !important;
+}
+
+.gsc-results-close-btn-visible {
+	display: none;
+}
+</style>
+								<script>
+									(function() {
+										var cx = '017553474198412024421:c_qxiweliao';
+										var gcse = document.createElement('script');
+										gcse.type = 'text/javascript';
+										gcse.async = true;
+										gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+										var s = document.getElementsByTagName('script')[0];
+										s.parentNode.insertBefore(gcse, s);
+									})();
+								</script>
+								<gcse:search></gcse:search>
+							</div>
+							<div class="modal-footer">
+								<button class="btn" type="button" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Account Login/Register/Forgot -->
+				<div id="account" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true" data-backdrop="false">
+					<div class="modal-dialog animated">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title blue-font" id="loginModalLabel">Login with</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div id="social" class="content">
+										<div class="social">
+											<a id="github_login" class="circle github" href="#"><i class="fa fa-github fa-fw"></i></a> 
+											<a id="google_login" class="circle google" href="#"><i class="fa fa-google-plus fa-fw"></i></a> 
+											<a id="facebook_login" class="circle facebook" href="#"><i class="fa fa-facebook fa-fw"></i></a>
+										</div>
+										<div class="division">
+											<div class="line l"></div>
+											<span>or</span>
+											<div class="line r"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div id="login" class="content">
+										<div class="form">
+											<div id="l_sendmessage">Logged In!</div>
+											<div id="l_errormessage"></div>
+											<form id="loginForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form">
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="l_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+													<div class="validation"></div>
+												</div>
+												<div class="form-group">
+													<input type="password" class="form-control" name="password" id="l_password" placeholder="Password" data-rule="required" data-msg="Please enter your password" />
+													<div class="validation"></div>
+												</div>
+												<div class="text-center">
+													<button class="btn" type="submit">Login</button>
+												</div>
+												<input id="l_service" class="form-control" type="hidden" name="signin" value="signin">
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div id="register" class="content" style="display: none;">
+										<div class="form">
+                      <div id="r_sendmessage">Account Created!</div>
+                      <div id="r_errormessage"></div>
+                      <form id="registerForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form">
+                        <div class="form-group">
+                          <input id="r_email" type="email" class="form-control" name="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                          <input id="r_userid" type="text" class="form-control" name="userid" placeholder="User Id" pattern="[a-zA-Z0-9]+" data-rule="minlen:5" data-msg="Please enter a valid user Id" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                          <input id="r_password" type="password" class="form-control" name="password" placeholder="Password" pattern="[a-zA-Z0-9]+" data-rule="minlen:6" data-msg="Please enter your password" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                          <input id="r_confirm" type="confirm" class="form-control" name="confirm" placeholder="Repeat Password" data-match="#r_password" data-msg="Whoops, passwords don't match" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn" type="submit">Create Account</button>
+                        </div>
+                        <input id="r_service" class="form-control" type="hidden" name="register" value="register">
+                      </form>
+                    </div>
+									</div>
+								</div>
+								<div class="col-lg-12 col-md-12 col-sm-12">
+									<div id="forgot" class="content" style="display: none;">
+                    <div class="form">
+                      <div id="f_sendmessage">Password Requested!</div>
+                      <div id="f_errormessage"></div>
+                      <form id="forgotForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form">
+                        <div class="form-group">
+                          <input id="f_email" type="email" class="form-control" name="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                          <div class="validation"></div>
+                        </div>
+                        <div class="text-center">
+                          <button class="btn" type="submit">Request Password</button>
+                        </div>
+                        <input id="f_service" class="form-control" type="hidden" name="forgot" value="forgot">
+                      </form>
+                    </div>
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div id="create-forgot-footer">
+									<span>Create account?</span> <a href="javascript: showRegisterForm();">Register</a><br>
+									<span>Forgot password?</span> <a href="javascript: showForgotForm();">Request</a>
+								</div>
+								<div id="login-footer" style="display: none">
+									<span>Already have an account?</span> <a href="javascript: showLoginForm();">Login</a><br>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+	</header>
+	<!-- #header -->
+
+	<!--==========================
     Hero Section
   ============================-->
-  <section id="hero" class="wow fadeIn">
-    <div class="hero-container">
-      <h1>Welcome to CanvasXpress</h1>
-      <h2>Data analytics for Reproducible Research</h2>
-      <img src="img/hero-img.png" alt="Hero Imgs">
-      <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
-      <div class="btns">
-        <a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a>
-        <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a>
-        <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
-      </div>
-    </div>
-  </section><!-- #hero -->
+	<section id="hero" class="wow fadeIn">
+		<div class="hero-container">
+			<h1>Welcome to CanvasXpress</h1>
+			<h2>Data analytics for Reproducible Research</h2>
+			<img src="img/hero-img.png" alt="Hero Imgs"> <a href="#get-started" class="btn-get-started scrollto">Get Started</a>
+			<div class="btns">
+				<a href="#"><i class="fa fa-apple fa-3x"></i> App Store</a> <a href="#"><i class="fa fa-play fa-3x"></i> Google Play</a> <a href="#"><i class="fa fa-windows fa-3x"></i> windows</a>
+			</div>
+		</div>
+	</section>
+	<!-- #hero -->
 
-  <!--==========================
+	<!--==========================
     Get Started Section
   ============================-->
-  <section id="get-started" class="padd-section text-center wow fadeInUp">
+	<section id="get-started" class="padd-section text-center wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
+		<div class="container">
+			<div class="section-title text-center">
 
-        <h2>simple systeme fordiscount </h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+				<h2>simple systeme fordiscount</h2>
+				<p class="separator">Integer cursus bibendum augue ac cursus .</p>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div class="container">
-      <div class="row">
+		<div class="container">
+			<div class="row">
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
+				<div class="col-md-6 col-lg-4">
+					<div class="feature-block">
 
-            <img src="img/svg/cloud.svg" alt="img" class="img-fluid">
-            <h4>introducing whatsapp</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <a href="#">read more</a>
+						<img src="img/svg/cloud.svg" alt="img" class="img-fluid">
+						<h4>introducing whatsapp</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<a href="#">read more</a>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
+				<div class="col-md-6 col-lg-4">
+					<div class="feature-block">
 
-            <img src="img/svg/planet.svg" alt="img" class="img-fluid">
-            <h4>user friendly interface</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <a href="#">read more</a>
+						<img src="img/svg/planet.svg" alt="img" class="img-fluid">
+						<h4>user friendly interface</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<a href="#">read more</a>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="feature-block">
+				<div class="col-md-6 col-lg-4">
+					<div class="feature-block">
 
-            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
-            <h4>build the app everyone love</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-            <a href="#">read more</a>
+						<img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
+						<h4>build the app everyone love</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+						<a href="#">read more</a>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-  </section>
+	</section>
 
-  <!--==========================
+	<!--==========================
     About Us Section
   ============================-->
-  <section id="about-us" class="about-us padd-section wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
+	<section id="about-us" class="about-us padd-section wow fadeInUp">
+		<div class="container">
+			<div class="row justify-content-center">
 
-        <div class="col-md-5 col-lg-3">
-          <img src="img/about-img.png" alt="About">
-        </div>
+				<div class="col-md-5 col-lg-3">
+					<img src="img/about-img.png" alt="About">
+				</div>
 
-        <div class="col-md-7 col-lg-5">
-          <div class="about-content">
+				<div class="col-md-7 col-lg-5">
+					<div class="about-content">
 
-            <h2><span>eStartup</span>UI Design Mobile </h2>
-            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-            </p>
+						<h2>
+							<span>eStartup</span>UI Design Mobile
+						</h2>
+						<p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+							commodo consequat</p>
 
-            <ul class="list-unstyled">
-              <li><i class="fa fa-angle-right"></i>Creative Design</li>
-              <li><i class="fa fa-angle-right"></i>Retina Ready</li>
-              <li><i class="fa fa-angle-right"></i>Easy to Use</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-              <li><i class="fa fa-angle-right"></i>Unlimited Features</li>
-            </ul>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-angle-right"></i>Creative Design</li>
+							<li><i class="fa fa-angle-right"></i>Retina Ready</li>
+							<li><i class="fa fa-angle-right"></i>Easy to Use</li>
+							<li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+							<li><i class="fa fa-angle-right"></i>Unlimited Features</li>
+						</ul>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Features Section
   ============================-->
 
-  <section id="features" class="padd-section text-center wow fadeInUp">
+	<section id="features" class="padd-section text-center wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Amazing Features.</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-      </div>
-    </div>
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>Amazing Features.</h2>
+				<p class="separator">Integer cursus bibendum augue ac cursus .</p>
+			</div>
+		</div>
 
-    <div class="container">
-      <div class="row">
+		<div class="container">
+			<div class="row">
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/paint-palette.svg" alt="img" class="img-fluid">
-            <h4>creative design</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/paint-palette.svg" alt="img" class="img-fluid">
+						<h4>creative design</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/vector.svg" alt="img" class="img-fluid">
-            <h4>Retina Ready</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/vector.svg" alt="img" class="img-fluid">
+						<h4>Retina Ready</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/design-tool.svg" alt="img" class="img-fluid">
-            <h4>easy to use</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/design-tool.svg" alt="img" class="img-fluid">
+						<h4>easy to use</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
-            <h4>Free Updates</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
+						<h4>Free Updates</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
-            <h4>Free Updates</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/asteroid.svg" alt="img" class="img-fluid">
+						<h4>Free Updates</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/cloud-computing.svg" alt="img" class="img-fluid">
-            <h4>App store support</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/cloud-computing.svg" alt="img" class="img-fluid">
+						<h4>App store support</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/pixel.svg" alt="img" class="img-fluid">
-            <h4>Perfect Pixel</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/pixel.svg" alt="img" class="img-fluid">
+						<h4>Perfect Pixel</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="feature-block">
-            <img src="img/svg/code.svg" alt="img" class="img-fluid">
-            <h4>clean codes</h4>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="feature-block">
+						<img src="img/svg/code.svg" alt="img" class="img-fluid">
+						<h4>clean codes</h4>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+					</div>
+				</div>
 
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Screenshots Section
   ============================-->
-  <section id="screenshots" class="padd-section text-center wow fadeInUp">
+	<section id="screenshots" class="padd-section text-center wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>App Gallery</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
-      </div>
-    </div>
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>App Gallery</h2>
+				<p class="separator">Integer cursus bibendum augue ac cursus .</p>
+			</div>
+		</div>
 
-    <div class="container">
-      <div class="owl-carousel owl-theme">
+		<div class="container">
+			<div class="owl-carousel owl-theme">
 
-        <div><img src="img/screen/1.jpg" alt="img"></div>
-        <div><img src="img/screen/2.jpg" alt="img"></div>
-        <div><img src="img/screen/3.jpg" alt="img"></div>
-        <div><img src="img/screen/4.jpg" alt="img"></div>
-        <div><img src="img/screen/5.jpg" alt="img"></div>
-        <div><img src="img/screen/6.jpg" alt="img"></div>
-        <div><img src="img/screen/7.jpg" alt="img"></div>
-        <div><img src="img/screen/8.jpg" alt="img"></div>
-        <div><img src="img/screen/9.jpg" alt="img"></div>
+				<div>
+					<img src="img/screen/1.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/2.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/3.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/4.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/5.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/6.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/7.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/8.jpg" alt="img">
+				</div>
+				<div>
+					<img src="img/screen/9.jpg" alt="img">
+				</div>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-  </section>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Video Section
   ============================-->
 
-  <section id="video" class="text-center wow fadeInUp">
-    <div class="overlay">
-      <div class="container-fluid container-full">
+	<section id="video" class="text-center wow fadeInUp">
+		<div class="overlay">
+			<div class="container-fluid container-full">
 
-        <div class="row">
-          <a href="#" class="js-modal-btn play-btn" data-video-id="s22ViV7tBKE"></a>
-        </div>
+				<div class="row">
+					<a href="#" class="js-modal-btn play-btn" data-video-id="s22ViV7tBKE"></a>
+				</div>
 
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Team Section
   ============================-->
-  <section id="team" class="padd-section text-center wow fadeInUp">
+	<section id="team" class="padd-section text-center wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
+		<div class="container">
+			<div class="section-title text-center">
 
-        <h2>Team Member</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+				<h2>Team Member</h2>
+				<p class="separator">Integer cursus bibendum augue ac cursus .</p>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div class="container">
-      <div class="row">
+		<div class="container">
+			<div class="row">
 
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="img/team/1.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-md-4 col-lg-3">
+					<div class="team-block bottom">
+						<img src="img/team/1.jpg" class="img-responsive" alt="img">
+						<div class="team-content">
+							<ul class="list-unstyled">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+							<span>manager</span>
+							<h4>Kimberly Tran</h4>
+						</div>
+					</div>
+				</div>
 
-       <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="img/team/2.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-md-4 col-lg-3">
+					<div class="team-block bottom">
+						<img src="img/team/2.jpg" class="img-responsive" alt="img">
+						<div class="team-content">
+							<ul class="list-unstyled">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+							<span>manager</span>
+							<h4>Kimberly Tran</h4>
+						</div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="img/team/3.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-md-4 col-lg-3">
+					<div class="team-block bottom">
+						<img src="img/team/3.jpg" class="img-responsive" alt="img">
+						<div class="team-content">
+							<ul class="list-unstyled">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+							<span>manager</span>
+							<h4>Kimberly Tran</h4>
+						</div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-md-4 col-lg-3">
-          <div class="team-block bottom">
-            <img src="img/team/4.jpg" class="img-responsive" alt="img">
-            <div class="team-content">
-              <ul class="list-unstyled">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              </ul>
-              <span>manager</span>
-              <h4>Kimberly Tran</h4>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-md-4 col-lg-3">
+					<div class="team-block bottom">
+						<img src="img/team/4.jpg" class="img-responsive" alt="img">
+						<div class="team-content">
+							<ul class="list-unstyled">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+							</ul>
+							<span>manager</span>
+							<h4>Kimberly Tran</h4>
+						</div>
+					</div>
+				</div>
 
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</section>
 
 
-  <!--==========================
+	<!--==========================
     Testimonials Section
   ============================-->
 
-  <section id="testimonials" class="padd-section text-center wow fadeInUp">
-    <div class="container">
-      <div class="row justify-content-center">
+	<section id="testimonials" class="padd-section text-center wow fadeInUp">
+		<div class="container">
+			<div class="row justify-content-center">
 
-        <div class="col-md-8">
+				<div class="col-md-8">
 
-          <div class="testimonials-content">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<div class="testimonials-content">
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-              <div class="carousel-inner" role="listbox">
+							<div class="carousel-inner" role="listbox">
 
-                <div class="carousel-item  active">
-                  <div class="top-top">
+								<div class="carousel-item  active">
+									<div class="top-top">
 
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>Kimberly Tran<span>manager</span></h4>
+										<h2>Our Users Speack volumes us</h2>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+											galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+										<h4>
+											Kimberly Tran<span>manager</span>
+										</h4>
 
-                  </div>
-                </div>
+									</div>
+								</div>
 
-                <div class="carousel-item ">
-                  <div class="top-top">
+								<div class="carousel-item ">
+									<div class="top-top">
 
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>Henderson<span>manager</span></h4>
+										<h2>Our Users Speack volumes us</h2>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+											galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+										<h4>
+											Henderson<span>manager</span>
+										</h4>
 
-                  </div>
-                </div>
+									</div>
+								</div>
 
-                <div class="carousel-item ">
-                  <div class="top-top">
+								<div class="carousel-item ">
+									<div class="top-top">
 
-                    <h2>Our Users Speack volumes us</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                      specimen book. It has survived not only five centuries.</p>
-                    <h4>David Spark<span>manager</span></h4>
+										<h2>Our Users Speack volumes us</h2>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+											galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+										<h4>
+											David Spark<span>manager</span>
+										</h4>
 
-                  </div>
-                </div>
+									</div>
+								</div>
 
-              </div>
+							</div>
 
-              <div class="btm-btm">
+							<div class="btm-btm">
 
-                <ul class="list-unstyled carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                </ul>
+								<ul class="list-unstyled carousel-indicators">
+									<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+									<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+								</ul>
 
-              </div>
+							</div>
 
-            </div>
-          </div>
-        </div>
+						</div>
+					</div>
+				</div>
 
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Pricing Table Section
   ============================-->
-  <section id="pricing" class="padd-section text-center wow fadeInUp">
+	<section id="pricing" class="padd-section text-center wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
+		<div class="container">
+			<div class="section-title text-center">
 
-        <h2>Meet With Price</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+				<h2>Meet With Price</h2>
+				<p class="separator">Integer cursus bibendum augue ac cursus .</p>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div class="container">
-      <div class="row">
+		<div class="container">
+			<div class="row">
 
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>basic</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="block-pricing">
+						<div class="table">
+							<h4>basic</h4>
+							<h2>$29</h2>
+							<ul class="list-unstyled">
+								<li><b>4 GB</b> Ram</li>
+								<li><b>7/24</b> Tech Support</li>
+								<li><b>40 GB</b> SSD Cloud Storage</li>
+								<li>Monthly Backups</li>
+								<li>Palo Protection</li>
+							</ul>
+							<div class="table_btn">
+								<a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>PERSONAL</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="block-pricing">
+						<div class="table">
+							<h4>PERSONAL</h4>
+							<h2>$29</h2>
+							<ul class="list-unstyled">
+								<li><b>4 GB</b> Ram</li>
+								<li><b>7/24</b> Tech Support</li>
+								<li><b>40 GB</b> SSD Cloud Storage</li>
+								<li>Monthly Backups</li>
+								<li>Palo Protection</li>
+							</ul>
+							<div class="table_btn">
+								<a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>BUSINESS</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-3">
+					<div class="block-pricing">
+						<div class="table">
+							<h4>BUSINESS</h4>
+							<h2>$29</h2>
+							<ul class="list-unstyled">
+								<li><b>4 GB</b> Ram</li>
+								<li><b>7/24</b> Tech Support</li>
+								<li><b>40 GB</b> SSD Cloud Storage</li>
+								<li>Monthly Backups</li>
+								<li>Palo Protection</li>
+							</ul>
+							<div class="table_btn">
+								<a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-3">
-          <div class="block-pricing">
-            <div class="table">
-              <h4>profeesional</h4>
-              <h2>$29</h2>
-              <ul class="list-unstyled">
-                <li><b>4 GB</b> Ram</li>
-                <li><b>7/24</b> Tech Support</li>
-                <li><b>40 GB</b> SSD Cloud Storage</li>
-                <li>Monthly Backups</li>
-                <li>Palo Protection</li>
-              </ul>
-              <div class="table_btn">
-                <a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+				<div class="col-md-6 col-lg-3">
+					<div class="block-pricing">
+						<div class="table">
+							<h4>profeesional</h4>
+							<h2>$29</h2>
+							<ul class="list-unstyled">
+								<li><b>4 GB</b> Ram</li>
+								<li><b>7/24</b> Tech Support</li>
+								<li><b>40 GB</b> SSD Cloud Storage</li>
+								<li>Monthly Backups</li>
+								<li>Palo Protection</li>
+							</ul>
+							<div class="table_btn">
+								<a href="#" class="btn"><i class="fa fa-shopping-cart"></i> Buy Now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Blog Section
   ============================-->
-  <section id="blog" class="padd-section wow fadeInUp">
+	<section id="blog" class="padd-section wow fadeInUp">
 
-    <div class="container">
-      <div class="section-title text-center">
+		<div class="container">
+			<div class="section-title text-center">
 
-        <h2>Latest posts</h2>
-        <p class="separator">Integer cursus bibendum augue ac cursus .</p>
+				<h2>Latest posts</h2>
+				<p class="separator">Integer cursus bibendum augue ac cursus .</p>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div class="container">
-      <div class="row">
+		<div class="container">
+			<div class="row">
 
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="img/blog/blog-image-1.jpg" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-4">
+					<div class="block-blog text-left">
+						<a href="#"><img src="img/blog/blog-image-1.jpg" alt="img"></a>
+						<div class="content-blog">
+							<h4>
+								<a href="#">whats isthe difference between good and bat typography</a>
+							</h4>
+							<span>05, juin 2017</span> <a class="pull-right readmore" href="#">read more</a>
+						</div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-4">
+					<div class="block-blog text-left">
+						<a href="#"><img src="img/blog/blog-image-2.jpg" class="img-responsive" alt="img"></a>
+						<div class="content-blog">
+							<h4>
+								<a href="#">whats isthe difference between good and bat typography</a>
+							</h4>
+							<span>05, juin 2017</span> <a class="pull-right readmore" href="#">read more</a>
+						</div>
+					</div>
+				</div>
 
-        <div class="col-md-6 col-lg-4">
-          <div class="block-blog text-left">
-            <a href="#"><img src="img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
-            <div class="content-blog">
-              <h4><a href="#">whats isthe difference between good and bat typography</a></h4>
-              <span>05, juin 2017</span>
-              <a class="pull-right readmore" href="#">read more</a>
-            </div>
-          </div>
-        </div>
+				<div class="col-md-6 col-lg-4">
+					<div class="block-blog text-left">
+						<a href="#"><img src="img/blog/blog-image-3.jpg" class="img-responsive" alt="img"></a>
+						<div class="content-blog">
+							<h4>
+								<a href="#">whats isthe difference between good and bat typography</a>
+							</h4>
+							<span>05, juin 2017</span> <a class="pull-right readmore" href="#">read more</a>
+						</div>
+					</div>
+				</div>
 
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Newsletter Section
   ============================-->
-  <section id="newsletter" class="newsletter text-center wow fadeInUp">
-    <div class="overlay padd-section">
-      <div class="container">
+	<section id="newsletter" class="newsletter text-center wow fadeInUp">
+		<div class="overlay padd-section">
+			<div class="container">
 
-        <div class="row justify-content-center">
-          <div class="col-md-9 col-lg-6">
-            <form class="form-inline" method="POST" action="#">
+				<div class="row justify-content-center">
+					<div class="col-md-9 col-lg-6">
+						<form class="form-inline" method="POST" action="#">
 
-              <input type="email" class="form-control " placeholder="Email Adress" name="email">
-              <button type="submit" class="btn btn-default"><i class="fa fa-location-arrow"></i>Subscribe</button>
+							<input type="email" class="form-control " placeholder="Email Adress" name="email">
+							<button type="submit" class="btn btn-default">
+								<i class="fa fa-location-arrow"></i>Subscribe
+							</button>
 
-            </form>
+						</form>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-          <ul class="list-unstyled">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
+				<ul class="list-unstyled">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
 
 
-      </div>
-    </div>
-  </section>
+			</div>
+		</div>
+	</section>
 
-  <!--==========================
+	<!--==========================
     Contact Section
   ============================-->
-  <section id="contact" class="padd-section wow fadeInUp">
+	<section id="contact" class="padd-section wow fadeInUp">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2>Contact</h2>
+				<p class="separator">Please send us a message with problems, suggestions or feature requests</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-3 col-md-4">
+					<div class="info">
+						<div>
+							<i class="fa fa-map-marker"></i>
+							<p>Newtown, PA 18940</p>
+						</div>
+						<div class="email">
+							<i class="fa fa-envelope"></i>
+							<p>imnphd@gmail.com</p>
+						</div>
+						<div>
+							<i class="fa fa-phone"></i>
+							<p>
+								<a href="https://www.canvasxpress.org">CanvasXpress</a>
+							</p>
+						</div>
+					</div>
+					<div class="social-links">
+						<a href="https://twitter.com/canvasxpress" class="twitter"><i class="fa fa-twitter"></i></a>
+						<!--  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>  -->
+						<!--  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>  -->
+						<!--  <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>  -->
+						<a href="www.linkedin.com/in/isaac-neuhaus-3b3ab5" class="linkedin"><i class="fa fa-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-8">
+					<div class="form">
+						<div id="c_sendmessage">Your message has been sent. Thank you!</div>
+						<div id="c_errormessage"></div>
+						<form id="contactForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form" class="contactForm">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control" id="c_name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<input type="email" class="form-control" name="email" id="c_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" name="subject" id="c_subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+								<div class="validation"></div>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" name="message" id="c_message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+								<div class="validation"></div>
+							</div>
+							<div class="text-center">
+								<button class="btn" type="submit">Send Message</button>
+							</div>
+							<input id="c_version" class="form-control" type="hidden" name="version" value="__VER__">
+							<input id="c_service" class="form-control" type="hidden" name="service" value="message">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- #contact -->
 
-    <div class="container">
-      <div class="section-title text-center">
-        <h2>Contact</h2>
-        <p class="separator">Please send us a message with problems, suggestions or feature requests</p>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-
-        <div class="col-lg-3 col-md-4">
-
-          <div class="info">
-            <div>
-              <i class="fa fa-map-marker"></i>
-              <p>Isaac Neuhaus</p>
-            </div>
-
-            <div class="email">
-              <i class="fa fa-envelope"></i>
-              <p> imnphd@gmail.com</p>
-            </div>
-
-            <div>
-              <i class="fa fa-phone"></i>
-              <p><a href="https://www.canvasxpress.org">CanvasXpress</a></p>
-            </div>
-          </div>
-
-          <div class="social-links">
-            <a href="https://twitter.com/canvasxpress" class="twitter"><i class="fa fa-twitter"></i></a>
-            <!--  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>  -->
-            <!--  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>  -->
-            <!--  <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>  -->
-            <a href="www.linkedin.com/in/isaac-neuhaus-3b3ab5" class="linkedin"><i class="fa fa-linkedin"></i></a>
-          </div>
-
-        </div>
-
-        <div class="col-lg-5 col-md-8">
-          <div class="form">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
-            <div id="errormessage"></div>
-            <form id="ContactForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form" class="contactForm">
-              <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" id="c_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="c_subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                <div class="validation"></div>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" name="message" id="c_message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                <div class="validation"></div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-              <input id="c_version" class="form-control" type="hidden" name="version" value="__VER__">
-              <input id="c_service" class="form-control" type="hidden" name="service" value="message">              
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!-- #contact -->
-
-  <!--==========================
+	<!--==========================
     Footer
   ============================-->
-  <footer class="footer">
-    <div class="container">
-      <div class="row">
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
 
-        <div class="col-md-12 col-lg-4">
-          <div class="footer-logo">
+				<div class="col-md-12 col-lg-4">
+					<div class="footer-logo">
 
-            <a class="navbar-brand" href="#">eStartup</a>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
+						<a class="navbar-brand" href="#">eStartup</a>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
+				<div class="col-sm-6 col-md-3 col-lg-2">
+					<div class="list-menu">
 
-            <h4>Abou Us</h4>
+						<h4>Abou Us</h4>
 
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
+						<ul class="list-unstyled">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Features item</a></li>
+							<li><a href="#">Live streaming</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
+				<div class="col-sm-6 col-md-3 col-lg-2">
+					<div class="list-menu">
 
-            <h4>Abou Us</h4>
+						<h4>Abou Us</h4>
 
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
+						<ul class="list-unstyled">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Features item</a></li>
+							<li><a href="#">Live streaming</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
+				<div class="col-sm-6 col-md-3 col-lg-2">
+					<div class="list-menu">
 
-            <h4>Support</h4>
+						<h4>Support</h4>
 
-            <ul class="list-unstyled">
-              <li><a href="#">faq</a></li>
-              <li><a href="#">Editor help</a></li>
-              <li><a href="#">Contact us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
+						<ul class="list-unstyled">
+							<li><a href="#">faq</a></li>
+							<li><a href="#">Editor help</a></li>
+							<li><a href="#">Contact us</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-        <div class="col-sm-6 col-md-3 col-lg-2">
-          <div class="list-menu">
+				<div class="col-sm-6 col-md-3 col-lg-2">
+					<div class="list-menu">
 
-            <h4>Abou Us</h4>
+						<h4>Abou Us</h4>
 
-            <ul class="list-unstyled">
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Features item</a></li>
-              <li><a href="#">Live streaming</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
+						<ul class="list-unstyled">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Features item</a></li>
+							<li><a href="#">Live streaming</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
 
-          </div>
-        </div>
+					</div>
+				</div>
 
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div class="copyrights">
-      <div class="container">
-        <p>&copy; Copyrights eStartup. All rights reserved.</p>
-        <div class="credits">
-          <!--
+		<div class="copyrights">
+			<div class="container">
+				<p>&copy; Copyrights eStartup. All rights reserved.</p>
+				<div class="credits">
+					<!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
             Licensing information: https://bootstrapmade.com/license/
             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=eStartup
           -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-    </div>
+					Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+				</div>
+			</div>
+		</div>
 
-  </footer>
+	</footer>
 
 
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+	<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/modal-video/js/modal-video.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+	<!-- JavaScript Libraries -->
+	<script src="lib/jquery/jquery.min.js"></script>
+	<script src="lib/jquery/jquery-migrate.min.js"></script>
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/superfish/hoverIntent.js"></script>
+	<script src="lib/superfish/superfish.min.js"></script>
+	<script src="lib/easing/easing.min.js"></script>
+	<script src="lib/modal-video/js/modal-video.js"></script>
+	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="lib/wow/wow.min.js"></script>
+	<!-- Contact Form JavaScript File -->
+	<script src="contactform/contactform.js"></script>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
+	<!-- Template Main Javascript File -->
+	<script src="js/main.js"></script>
 
 </body>
 </html>
