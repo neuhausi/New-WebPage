@@ -132,8 +132,8 @@ span {
 }
 
 .back-to-top:hover {
-  background: #55b03f;
-  color: #fff;
+  background: #fff;
+  color: #4575b4;
 }
 
 /*--------------------------------------------------------------
@@ -415,6 +415,14 @@ span {
 
 .nav-menu ul ul {
   margin: 0;
+}
+
+.nav-menu i:hover {
+  color: #4575b4;
+}
+
+.nav-menu a:not([href]):hover {
+  color: #4575b4;
 }
 
 /* Mobile Nav Toggle */
@@ -1047,7 +1055,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #pricing .block-pricing .table .table_btn a:hover {
-  background: #55b03f;
+  background: #fff;
 }
 
 #pricing .block-pricing .table .table_btn a .fa {
@@ -1168,7 +1176,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter .btn:hover {
-  background: #55b03f;
+  background: #fff;
 }
 
 #newsletter .btn .fa {
@@ -1194,7 +1202,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #newsletter ul li:hover {
-  background: #55b03f;
+  background: #fff;
 }
 
 #newsletter ul li .fa {
@@ -1247,8 +1255,8 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .social-links a:hover {
-  background: #55b03f;
-  color: #fff;
+  background: #fff;
+  color: #4575b4;
 }
 
 #contact .form #sendmessage {
@@ -1284,7 +1292,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .form input, #contact .form textarea {
-  border-radius: 0;
+  border-radius: 3;
   box-shadow: none;
   font-size: 14px;
   padding: 12px 10px;
@@ -1292,15 +1300,25 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 #contact .form button[type="submit"] {
-  background: #4575b4;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 11px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  border: 2px solid #4575b4;
+  background: #fff;
+  color: #4575b4;
+  text-decoration: none;
 }
 
 #contact .form button[type="submit"]:hover {
-  background: #92d283;
+  background: #4575b4;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -1566,7 +1584,7 @@ body {
     background-color: #4D4D4d;;
 }
 /* modal buttons */
-.loginBox .btn-login, .registerBox .btn-register, .forgotBox .btn-forgot{
+.loginBox .btn-login, .registerBox .btn-register, .forgotBox .btn-forgot, .btn-message{
     display: block;
     margin: 0 auto;
     padding: 15px 50px;
