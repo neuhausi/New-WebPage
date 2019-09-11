@@ -60,8 +60,10 @@
             </ul></li>
           <li><a href="#blog">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="#download">Download</a></li>
           <li><a data-toggle="modal" data-target="#search"><i id="searchGlyph" class="fa fa-search fa-3x"></i></a></li>
           <li><a data-toggle="modal" data-target="#account">Login</a></li>
+          <li><a id="siteUserId" href="#"></a></li>
         </ul>
       </nav>
       <!-- #nav-menu-container -->
@@ -82,46 +84,11 @@
               </div>
               <div class="modal-body">
                 <style type="text/css">
-.reset-box-sizing, .reset-box-sizing *, .reset-box-sizing *:before,
-	.reset-box-sizing *:after, .gsc-inline-block {
-	-webkit-box-sizing: content-box;
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-}
-
-input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
-	.gsc-input-box-focus, .gsc-search-button {
-	box-sizing: content-box;
-	line-height: normal;
-}
-
-.gsc-results-wrapper-overlay {
-	width: 100% !important;
-	position: static !important;
-	padding: 0 !important;
-	overflow: visible !important;
-	box-shadow: none !important;
-}
-
-.gsc-modal-background-image-visible {
-	display: none !important;
-}
-
-.gsc-results-close-btn-visible {
-	display: none;
-}
-</style>
+.reset-box-sizing,.reset-box-sizing *,.reset-box-sizing *:before,.reset-box-sizing *:after,.gsc-inline-block{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;}input.gsc-input,.gsc-input-box,.gsc-input-box-hover,.gsc-input-box-focus,.gsc-search-button{box-sizing:content-box;line-height:normal;}.gsc-results-wrapper-overlay{width:100% !important;position:static !important;padding:0 !important;overflow:visible !important;box-shadow:none !important;}.gsc-modal-background-image-visible{display:none !important;}.gsc-results-close-btn-visible{display:none;}
+                </style>
                 <script>
-(function() {
-  var cx = '017553474198412024421:c_qxiweliao';
-	var gcse = document.createElement('script');
-	gcse.type = 'text/javascript';
-	gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(gcse, s);
-})();
-				</script>
+(function(){var cx='017553474198412024421:c_qxiweliao';var gcse = document.createElement('script');gcse.type = 'text/javascript';gcse.async = true;gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(gcse, s);})();
+				        </script>
                 <gcse:search></gcse:search>
               </div>
               <div class="modal-footer">
@@ -160,7 +127,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
                     <div class="form">
                       <div id="l_sendmessage">Logged In!</div>
                       <div id="l_errormessage"></div>
-                      <form id="loginForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form" class="needs-validation" novalidate>
+                      <form id="loginForm" action="https://www.canvasxpress.org/cgi-bin/services.pl" method="post" role="form">
                         <div class="form-group">
                           <input type="email" class="form-control" name="email" id="l_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
                           <div class="validation"></div>
@@ -178,11 +145,20 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
                   </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div id="logout" class="content" style="display: none;">
+                    <div class="form">
+                      <div class="text-center">
+                        <button class="btn" type="submit" onclick="javascript: showLoginForm();">Logout</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12">
                   <div id="register" class="content" style="display: none;">
                     <div class="form">
                       <div id="r_sendmessage">Account Created!</div>
                       <div id="r_errormessage"></div>
-                      <form id="registerForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Whoops, passwords do not match" : "")' class="needs-validation" novalidate>
+                      <form id="registerForm" action="https://www.canvasxpress.org/cgi-bin/services.pl" method="post" role="form" oninput='confirm.setCustomValidity(confirm.value != password.value ? "Whoops, passwords do not match" : "")'>
                         <div class="form-group">
                           <input id="r_email" type="email" class="form-control" name="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
                           <div class="validation"></div>
@@ -212,7 +188,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
                     <div class="form">
                       <div id="f_sendmessage">Password Requested!</div>
                       <div id="f_errormessage"></div>
-                      <form id="forgotForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form" class="needs-validation" novalidate>
+                      <form id="forgotForm" action="https://www.canvasxpress.org/cgi-bin/services.pl" method="post" role="form">
                         <div class="form-group">
                           <input id="f_email" type="email" class="form-control" name="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required/>
                           <div class="validation"></div>
@@ -879,7 +855,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
           <div class="form">
             <div id="c_sendmessage">Your message has been sent. Thank you!</div>
             <div id="c_errormessage"></div>
-            <form id="contactForm" action="https://canvasxpress.org/cgi-bin/services.pl" method="post" role="form" class="contactForm">
+            <form id="contactForm" action="https://www.canvasxpress.org/cgi-bin/services.pl" method="post" role="form">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="c_name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
@@ -899,7 +875,8 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
               <div class="text-center">
                 <button class="btn" type="submit">Send Message</button>
               </div>
-              <input id="c_version" class="form-control" type="hidden" name="version" value="__VER__"> <input id="c_service" class="form-control" type="hidden" name="service" value="message">
+              <input id="c_version" class="form-control" type="hidden" name="version" value="__VER__">
+              <input id="c_service" class="form-control" type="hidden" name="service" value="message">
             </form>
           </div>
         </div>
@@ -907,6 +884,75 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
     </div>
   </section>
   <!-- #contact -->
+
+  <!--==========================
+    Download Section
+  ============================-->
+  <section id="download" class="padd-section wow fadeInUp">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>Download</h2>
+        <p class="separator">Please register to obtain a link to the latest code of CanvasXpress</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="info">
+            <h2>License</h2>
+            <p>
+               CanvasXpress - JavaScript Canvas Library Copyright (c)
+               2009-2019 Isaac Neuhaus
+            </p>
+            <p>
+               Redistributions of the source code must retain this copyright
+               notice and the following disclaimer.
+            </p>
+            <p>
+               CanvasXpress is licensed under the terms of the Open Source
+               GPL version 3.0 license.
+            </p>
+            <p>
+               This program is distributed in the hope that it will be useful,
+               but WITHOUT ANY WARRANTY; without even the implied warranty of
+               MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+               GNU General Public License for more details.
+            </p>
+            <p>
+               Please see a copy of the GNU General Public License at
+               <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses</a>.
+            </p>
+            <p>
+               Commercial use may be granted to the extent that this source code
+               does NOT become part of any other Open Source or Commercially licensed
+               development library or toolkit without explicit permission.
+            </p>          
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form">
+            <div id="d_sendmessage">Your message has been sent. Thank you!</div>
+            <div id="d_errormessage"></div>
+            <form id="downloadForm" action="https://www.canvasxpress.org/cgi-bin/services.pl" method="post" role="form">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="d_name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" id="d_email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+              <div class="text-center">
+                <button class="btn" type="submit">Request Code</button>
+              </div>
+              <input id="d_service" class="form-control" type="hidden" name="service" value="download">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #download -->
 
   <!--==========================
     Footer
@@ -1018,8 +1064,6 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover,
   <script src="lib/modal-video/js/modal-video.js"></script>
   <script src="lib/owlcarousel/owl.carousel.min.js"></script>
   <script src="lib/wow/wow.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>

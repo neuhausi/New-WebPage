@@ -131,66 +131,178 @@ jQuery(document).ready(function( $ ) {
     }
   });
 
-// custom code
+  /**
+   *  Validate forms when submitted
+   */
+  
+	window.addEventListener('load', function() {
 
-});
+		var forms = document.getElementsByTagName('form');
 
-/**
- * Validation of the forms
- * 
- * @returns void
- */
+		var validation = Array.prototype.filter.call(forms, function(form) {
 
-(function() {
-  'use strict';
-  window.addEventListener('load', function() {
-    // Get the forms we want to add validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
       form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();          
-          var ele = form.getElementsByTagName("input");
-          for (var i = 0; i < ele.length; i++) {
-      			var sib = ele[i].nextElementSibling;
-      			var msg = ele[i].dataset ? ele[i].dataset.msg : "";
-      			var val = true;
-          	for (var j in ele[i].validity) {
-          		if (ele[i].validity[j] && j != 'valid') {
-          			val = false;
-          			break;
-          		}
-          	}
-          	if (sib && sib.className == 'validation') {
-          		sib.innerHTML = val ? "" : msg;
-          		sib.style.display = val ? 'hidden' : 'block';
-          	}
-          }          
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
-})();
+				
+        event.preventDefault();
+        event.stopPropagation();
 
-/**
- * Reset all fields in the forms in the modal
- * 
- * @returns void
- */
+        var f = $(this).find('.form-group');
+				var ferror = false;
+				var emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
-$(document).ready(function(){
-  $("#search").on("hide.bs.modal", function(){
+				f.children('input').each(function() {
+
+					var i = $(this);
+					var rule = i.attr('data-rule');
+
+					if (rule !== undefined) {
+						var ierror = false;
+						var pos = rule.indexOf(':', 0);
+						if (pos >= 0) {
+							var exp = rule.substr(pos + 1, rule.length);
+							rule = rule.substr(0, pos);
+						} else {
+							rule = rule.substr(pos + 1, rule.length);
+						}
+
+						switch (rule) {
+							case 'required':
+								if (i.val() === '') {
+									ferror = ierror = true;
+								}
+								break;
+
+							case 'minlen':
+								if (i.val().length < parseInt(exp)) {
+									ferror = ierror = true;
+								}
+								break;
+
+							case 'email':
+								if (!emailExp.test(i.val())) {
+									ferror = ierror = true;
+								}
+								break;
+
+							case 'checked':
+								if (!i.is(':checked')) {
+									ferror = ierror = true;
+								}
+								break;
+
+							case 'regexp':
+								exp = new RegExp(exp);
+								if (!exp.test(i.val())) {
+									ferror = ierror = true;
+								}
+								break;
+						}
+						i.next('.validation').html((ierror ? (i.attr('data-msg') !== undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+					}
+					
+				});
+				
+				f.children('textarea').each(function() {
+
+					var i = $(this);
+					var rule = i.attr('data-rule');
+
+					if (rule !== undefined) {
+						var ierror = false;
+						var pos = rule.indexOf(':', 0);
+						if (pos >= 0) {
+							var exp = rule.substr(pos + 1, rule.length);
+							rule = rule.substr(0, pos);
+						} else {
+							rule = rule.substr(pos + 1, rule.length);
+						}
+
+						switch (rule) {
+							case 'required':
+								if (i.val() === '') {
+									ferror = ierror = true;
+								}
+								break;
+
+							case 'minlen':
+								if (i.val().length < parseInt(exp)) {
+									ferror = ierror = true;
+								}
+								break;
+						}
+						i.next('.validation').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
+					}
+				});
+				
+				var f = $(this);
+				var e = f.prev();
+				var m = e.prev();
+
+				if (ferror) {
+					setTimeout(function() {
+				    f.find('input[type=text], input[type=password], input[type=number], input[type=email], textarea').val('');
+				    f.find('.validation').empty();
+				    f.removeClass('was-validated');
+					}, 5000);
+					return false;
+			  }
+			
+				var str = $(this).serialize(); 
+				var action = $(this).attr('action');
+				
+				if (!action) {
+					action = 'https://canvasxpress.org/cgi-bin/services.pl';
+				}
+
+
+        $.ajax({
+					type : "POST",
+					url : action,
+					data : str,
+					success : function(msg) {
+						if (!msg) {
+							msg = m.text();
+						}
+						e.removeClass("show");
+						f.find("input, textarea").val("");
+						m.addClass("show");
+						m.html(msg);
+						if (f.attr('id') == 'loginForm') {
+							setCookie("canvasXpressUserId", msg);
+						}
+						setTimeout(function() {
+							$('#account').modal('hide');
+							m.removeClass("show");
+						}, 3500);
+					},
+					error : function(msg) {
+						m.removeClass("show");
+						e.addClass("show");
+						e.html(msg);
+					}
+				});
+        
+				return false;
+				
+			});
+
+		});
+
+	}, false);
+
+	/**
+	 * Modals
+	 */
+
+	$("#search").on("hide.bs.modal", function(){
     $('form').find('input[type=text], input[type=password], input[type=number], input[type=email], textarea').val('');
-
   });
   $("#account").on("hide.bs.modal", function(){
     $('form').find('input[type=text], input[type=password], input[type=number], input[type=email], textarea').val('');
     $(this).find('.validation').empty();
     $('form').removeClass('was-validated');
   });
+		
 });
 
 /**
@@ -199,7 +311,7 @@ $(document).ready(function(){
  * @returns void
  */
 
-function showRegisterForm(){
+var showRegisterForm = function(){
 	$('#social').fadeIn('fast');
 	$('#login').fadeOut('fast', function () {	
     $('#forgot').fadeOut('fast');
@@ -218,9 +330,11 @@ function showRegisterForm(){
  * @returns void
  */
 
-function showLoginForm(){
+var showLoginForm = function(){
+	unsetCookie("canvasXpressUserId");
 	$('#social').fadeIn('fast');
   $('#register').fadeOut('fast', function (){
+    $('#logout').fadeOut('fast');
     $('#forgot').fadeOut('fast');
     $('#login').fadeIn('fast');
     $('#login-footer').fadeOut('fast', function () {
@@ -237,7 +351,7 @@ function showLoginForm(){
  * @returns void
  */
 
-function showForgotForm(){
+var showForgotForm = function(){
 	$('#social').fadeOut('fast');
   $('#login').fadeOut('fast', function () {
     $('#register').fadeOut('fast');
@@ -249,3 +363,92 @@ function showForgotForm(){
   $('.modal-title').html('Enter email');
   $('.error').removeClass('alert alert-danger').html('');
 }
+
+/**
+ * Show Logout Form
+ * 
+ * @returns void
+ */
+var showLogoutForm = function(){
+	$('#social').fadeOut('fast');
+  $('#login').fadeOut('fast');
+  $('#register').fadeOut('fast');
+  $('#forgot').fadeOut('fast');
+  $('#logout').fadeIn('fast');
+  $('#create-forgot-footer').fadeOut('fast');
+  $('#login-footer').fadeOut('fast');
+  $('.modal-title').html('Close Modal');
+  $('.error').removeClass('alert alert-danger').html('');
+}
+
+/**
+ * Set Cookie
+ * 
+ * @returns void
+ */
+
+var setCookie = function(cname, cvalue) {
+	var d = new Date();
+	d.setTime(d.getTime() + (24 * 60 * 60 * 1000));
+	var expires = "expires=" + d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+	checkCookie("canvasXpressUserId");
+}
+
+/**
+ * Unset Cookie
+ * 
+ * @returns void
+ */
+
+var unsetCookie = function(cname) {
+	var d = new Date();
+	d.setTime(d.getTime() + 1);
+	var expires = "expires=" + d.toUTCString();
+	document.cookie = cname + "=;" + expires + ";path=/";
+	checkCookie("canvasXpressUserId");
+}
+
+/**
+ * Get Cookie
+ * 
+ * @returns void
+ */
+
+var getCookie = function(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for ( var i = 0; i < ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
+}
+
+/**
+ * Check Cookie
+ * 
+ * @returns void
+ */
+
+var checkCookie = function(cname) {
+	var val = getCookie(cname);
+	var nav = "";
+	if (val != "") {
+		nav = 'Welcome, ' + val;
+		$("#siteUserId").text(nav);
+		showLogoutForm();
+	} else {
+		nav = "";
+		$("#siteUserId").text(nav);
+	}
+}
+
+checkCookie();
+

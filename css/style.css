@@ -1323,6 +1323,97 @@ body.mobile-nav-active #mobile-nav-toggle i {
   color: #fff;
 }
 
+/* Download Section
+--------------------------------*/
+#download {
+  background: #fff;
+}
+
+#download .info {
+  color: #222;
+}
+
+#download form {
+	padding-top: 45px;
+}
+
+#download .info h2 {
+  padding: 0 0 0 50px;
+  margin-bottom: 20px;
+  line-height: 22px;
+	font-size: 32px;
+  color: #4575b4;
+}
+
+#download .info p {
+  padding: 0 0 0 50px;
+  margin-bottom: 20px;
+  line-height: 22px;
+  font-size: 14px;
+}
+
+#download .form #d_sendmessage {
+  color: #4575b4;
+  border: 1px solid #4575b4;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#download .form #d_errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#download .form #d_sendmessage.show, #download .form #d_errormessage.show, #download .form .show {
+  display: block;
+}
+
+#download .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#download .form input {
+  border-radius: 3;
+  box-shadow: none;
+  font-size: 14px;
+  padding: 12px 10px;
+  line-height: 1;
+}
+
+#download .form button[type="submit"] {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 11px 36px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin-bottom: 30px;
+  border: 2px solid #4575b4;
+  background: #fff;
+  color: #4575b4;
+  text-decoration: none;
+}
+
+#download .form button[type="submit"]:hover {
+  background: #4575b4;
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
