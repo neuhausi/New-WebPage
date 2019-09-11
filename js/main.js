@@ -135,6 +135,46 @@ jQuery(document).ready(function( $ ) {
 
 });
 
+/**
+ * Validation of the forms
+ * 
+ * @returns void
+ */
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();          
+          var ele = form.getElementsByTagName("input");
+          for (var i = 0; i < ele.length; i++) {
+      			var sib = ele[i].nextElementSibling;
+      			var msg = ele[i].dataset ? ele[i].dataset.msg : "";
+      			var val = true;
+          	for (var j in ele[i].validity) {
+          		if (ele[i].validity[j] && j != 'valid') {
+          			val = false;
+          			break;
+          		}
+          	}
+          	if (sib && sib.className == 'validation') {
+          		sib.innerHTML = val ? "" : msg;
+          		sib.style.display = val ? 'hidden' : 'block';
+          	}
+          }          
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+
 function showRegisterForm(){
 	$('#social').fadeIn('fast');
 	$('#login').fadeOut('fast', function () {	
