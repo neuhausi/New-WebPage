@@ -175,6 +175,30 @@ jQuery(document).ready(function( $ ) {
   }, false);
 })();
 
+/**
+ * Reset all fields in the forms in the modal
+ * 
+ * @returns void
+ */
+
+$(document).ready(function(){
+  $("#search").on("hide.bs.modal", function(){
+    $('form').find('input[type=text], input[type=password], input[type=number], input[type=email], textarea').val('');
+
+  });
+  $("#account").on("hide.bs.modal", function(){
+    $('form').find('input[type=text], input[type=password], input[type=number], input[type=email], textarea').val('');
+    $(this).find('.validation').empty();
+    $('form').removeClass('was-validated');
+  });
+});
+
+/**
+ * Show Register Form
+ * 
+ * @returns void
+ */
+
 function showRegisterForm(){
 	$('#social').fadeIn('fast');
 	$('#login').fadeOut('fast', function () {	
@@ -188,6 +212,12 @@ function showRegisterForm(){
   $('.error').removeClass('alert alert-danger').html('');     
 }
 
+/**
+ * Show Login Form
+ * 
+ * @returns void
+ */
+
 function showLoginForm(){
 	$('#social').fadeIn('fast');
   $('#register').fadeOut('fast', function (){
@@ -200,6 +230,12 @@ function showLoginForm(){
   $('.modal-title').html('Login with');
   $('.error').removeClass('alert alert-danger').html(''); 
 }
+
+/**
+ * Show Forgot Form
+ * 
+ * @returns void
+ */
 
 function showForgotForm(){
 	$('#social').fadeOut('fast');
