@@ -1,0 +1,136 @@
+{
+  "version": 25.1,
+  "renderTo": "dotplot4",
+  "data": {
+    "y": {
+      "vars": [
+        "Women",
+        "Men"
+      ],
+      "smps": [
+        "MIT",
+        "Stanford",
+        "Harvard",
+        "U.Penn",
+        "Princeton",
+        "Chicago",
+        "Georgetown",
+        "Tufts",
+        "Yale",
+        "Columbia",
+        "Duke",
+        "Dartmouth",
+        "NYU",
+        "Notre Dame",
+        "Cornell",
+        "Michigan",
+        "Brown",
+        "Berkeley",
+        "Emory",
+        "UCLA",
+        "SoCal"
+      ],
+      "data": [
+        [
+          94,
+          96,
+          112,
+          92,
+          90,
+          78,
+          94,
+          76,
+          79,
+          86,
+          93,
+          84,
+          67,
+          73,
+          80,
+          62,
+          72,
+          71,
+          68,
+          64,
+          72
+        ],
+        [
+          152,
+          151,
+          165,
+          141,
+          137,
+          118,
+          131,
+          112,
+          114,
+          119,
+          124,
+          114,
+          94,
+          100,
+          107,
+          84,
+          92,
+          88,
+          82,
+          78,
+          81
+        ]
+      ]
+    },
+    "z": {
+      "Connect": [
+        1,
+        1
+      ]
+    }
+  },
+  "config": {
+    "axisAlgorithm": "wilkinson",
+    "connectBy": "Connect",
+    "dotplotType": "stacked",
+    "graphType": "Dotplot",
+    "showTransition": true,
+    "smpTitle": "School",
+    "sortDir": "descending",
+    "theme": "CanvasXpress",
+    "title": "Gender Earnings Disparity",
+    "xAxis2Title": "Annual Salary",
+    "xAxisMinorTicks": false,
+    "xAxisShow": false,
+    "xAxisTickFormat": "$%sK",
+    "xAxisTitle": "Annual Salary"
+  },
+  "events": false,
+  "info": false,
+  "afterRender": [
+    [
+      "setDimensions",
+      [
+        570,
+        570,
+        true
+      ]
+    ],
+    [
+      "sortSamplesByVariable",
+      [
+        "Men"
+      ],
+      {
+        "sortDir": "descending"
+      },
+      1568255011987
+    ]
+  ],
+  "client": "MTU2ODI1NTAxMDU5OTo6MTo6MjUuMTo6",
+  "clientIP": {
+    "latitude": null,
+    "continent": null,
+    "longitude": null,
+    "country": null,
+    "postal": null,
+    "city": null
+  }
+}

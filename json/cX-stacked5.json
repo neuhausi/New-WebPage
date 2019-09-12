@@ -1,0 +1,85 @@
+{
+  "version": 25.1,
+  "renderTo": "stacked5",
+  "data": {
+    "y": {
+      "vars": [
+        "Pants on Fire",
+        "False",
+        "Mostly False",
+        "Half True",
+        "Mostly True",
+        "True"
+      ],
+      "smps": [
+        "Big Fat Liar",
+        "Two-Faced",
+        "Honest Abe"
+      ],
+      "data": [
+        [
+          -35,
+          -20,
+          -5
+        ],
+        [
+          -25,
+          -20,
+          -10
+        ],
+        [
+          -15,
+          -10,
+          -10
+        ],
+        [
+          10,
+          10,
+          15
+        ],
+        [
+          10,
+          20,
+          25
+        ],
+        [
+          5,
+          20,
+          35
+        ]
+      ]
+    }
+  },
+  "config": {
+    "axisAlgorithm": "wilkinson",
+    "colorScheme": "CanvasXpress",
+    "graphOrientation": "horizontal",
+    "graphType": "Stacked",
+    "legendColumns": 3,
+    "legendPosition": "bottom",
+    "marginRight": 20,
+    "title": "Diverging Stacked Graph",
+    "xAxisTickFormat": "%s%%"
+  },
+  "events": false,
+  "info": false,
+  "afterRender": [
+    [
+      "setDimensions",
+      [
+        570,
+        570,
+        true
+      ]
+    ]
+  ],
+  "client": "MTU2ODI1NTQwOTkyOTo6MTo6MjUuMTo6",
+  "clientIP": {
+    "latitude": null,
+    "postal": null,
+    "longitude": null,
+    "country": null,
+    "continent": null,
+    "city": null
+  }
+}

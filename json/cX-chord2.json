@@ -1,0 +1,83 @@
+{
+  "version": 25.1,
+  "renderTo": "chord2",
+  "data": {
+    "y": {
+      "vars": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "smps": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "data": [
+        [
+          11975,
+          5871,
+          8916,
+          2868
+        ],
+        [
+          1951,
+          10048,
+          2060,
+          6171
+        ],
+        [
+          8010,
+          16145,
+          8090,
+          8045
+        ],
+        [
+          1013,
+          990,
+          940,
+          6907
+        ]
+      ]
+    }
+  },
+  "config": {
+    "circularArc": 360,
+    "circularRotate": 180,
+    "circularType": "chord",
+    "graphType": "Circular",
+    "higlightGreyOut": true,
+    "rAxisTickFormat": [
+      "%sK",
+      "val / 1000"
+    ],
+    "showTransition": true,
+    "theme": "CanvasXpress",
+    "title": "Rotated Chord Graph",
+    "transitionStep": 50,
+    "transitionTime": 1500
+  },
+  "events": false,
+  "info": false,
+  "afterRender": [
+    [
+      "setDimensions",
+      [
+        570,
+        570,
+        true
+      ]
+    ]
+  ],
+  "client": "MTU2ODI1NDg2ODU5NTo6MTo6MjUuMTo6",
+  "clientIP": {
+    "country": null,
+    "city": null,
+    "continent": null,
+    "longitude": null,
+    "postal": null,
+    "latitude": null
+  }
+}

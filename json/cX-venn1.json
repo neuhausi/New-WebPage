@@ -1,0 +1,57 @@
+{
+  "version": 25.1,
+  "renderTo": "venn1",
+  "data": {
+    "venn": {
+      "data": {
+        "A": 340,
+        "B": 562,
+        "C": 620,
+        "D": 592,
+        "AB": 639,
+        "AC": 456,
+        "AD": 257,
+        "BC": 915,
+        "BD": 354,
+        "CD": 143,
+        "ABC": 552,
+        "ABD": 578,
+        "ACD": 298,
+        "BCD": 613,
+        "ABCD": 148
+      },
+      "legend": {
+        "A": "List 1",
+        "B": "List 2",
+        "C": "List 3",
+        "D": "List 4"
+      }
+    }
+  },
+  "config": {
+    "graphType": "Venn",
+    "showTransition": true,
+    "vennGroups": 4
+  },
+  "events": false,
+  "info": false,
+  "afterRender": [
+    [
+      "setDimensions",
+      [
+        570,
+        570,
+        true
+      ]
+    ]
+  ],
+  "client": "MTU2ODI1NTUxMDg2Njo6MTo6MjUuMTo6",
+  "clientIP": {
+    "city": null,
+    "country": null,
+    "continent": null,
+    "longitude": null,
+    "postal": null,
+    "latitude": null
+  }
+}
