@@ -555,7 +555,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
 }
 
 .section-title {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 992px) {
@@ -694,7 +694,7 @@ body.mobile-nav-active #mobile-nav-toggle i {
   margin-bottom: 0;
 }
 
-/* Screenshots Section
+/* Explore Section
 --------------------------------*/
 .owl-dot.active > span {
   height: 10px !important;
@@ -727,6 +727,16 @@ body.mobile-nav-active #mobile-nav-toggle i {
   background: #ddd;
 }
 
+.owl-carousel .owl-item img {
+	display: initial;
+	width: initial;
+	float: right;
+	
+	/*
+	height: 100%;
+	width: auto;
+	*/
+}
 /* Video Section
 --------------------------------*/
 #video {
