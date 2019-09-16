@@ -108,54 +108,6 @@ jQuery(document).ready(function( $ ) {
       }
     }
   });
-
-  // Modal video
-  new ModalVideo('.js-modal-btn', {channel: 'youtube'});
-
-  // Init Owl Carousel
-  var owl = $('.owl-carousel').owlCarousel({
-    items: 1,
-    //autoplay: true,
-    loop: true,
-    margin: 0,
-    autoHeight: true,
-    nav: true,
-    dots: true,
-    responsiveClass: true,
-    responsive: {
-      320: { items: 1},
-      480: { items: 1},
-      600: { items: 1},
-      767: { items: 1},
-      768: { items: 1},
-      992: { items: 1}
-    }
-  });
-
-  /**
-  owl.on('changed.owl.carousel', function (e) {
-    var current = e.item.index;
-    var img = $(e.target).find(".owl-item").eq(current).find("img");
-    var par = img.parent();
-    var src = img.attr('src');
-    var tar = src.replace('img/screen/', '').replace('.png', '');
-    var cnv = document.createElement("canvas");
-    cnv.setAttribute("id", tar);
-    cnv.setAttribute("height", img.height());
-    cnv.setAttribute("width", img.width());
-    img.css("display", "none");
-    par.append(cnv);
-    console.log('Image current is ' + src);
-    var cX = new CanvasXpress(
-    	  {
-    	   renderTo: tar,
-    	   data: src,
-    	   config: false,
-    	   events: false
-    	  }
-    );
-  });
-  **/
   
   /**
    *  Validate forms when submitted
