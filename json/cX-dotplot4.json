@@ -102,17 +102,7 @@
     "xAxisTickFormat": "$%sK",
     "xAxisTitle": "Annual Salary"
   },
-  "events": false,
-  "info": false,
   "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
     [
       "sortSamplesByVariable",
       [
@@ -123,14 +113,5 @@
       },
       1568255011987
     ]
-  ],
-  "client": "MTU2ODI1NTAxMDU5OTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "latitude": null,
-    "continent": null,
-    "longitude": null,
-    "country": null,
-    "postal": null,
-    "city": null
-  }
+  ]
 }

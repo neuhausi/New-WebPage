@@ -354,17 +354,7 @@
     "xAxisMinorTicks": false,
     "xAxisTitle": "len"
   },
-  "events": false,
-  "info": false,
   "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
     [
       "switchNumericToString",
       [
@@ -374,14 +364,5 @@
       {},
       1568255038167
     ]
-  ],
-  "client": "MTU2ODI1NTAzNzk5NTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "postal": null,
-    "city": null,
-    "country": null,
-    "continent": null,
-    "latitude": null,
-    "longitude": null
-  }
+  ]
 }

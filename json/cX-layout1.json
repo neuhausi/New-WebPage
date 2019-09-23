@@ -1231,26 +1231,5 @@
     "layoutAdjust": true,
     "scatterPlotMatrix": true,
     "theme": "CanvasXpress"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTEzNDE3Njo6MTo6MjUuMTo6",
-  "clientIP": {
-    "longitude": null,
-    "country": null,
-    "continent": null,
-    "postal": null,
-    "latitude": null,
-    "city": null
   }
 }

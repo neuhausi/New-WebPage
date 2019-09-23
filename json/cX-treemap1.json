@@ -1184,17 +1184,7 @@
     "theme": "CanvasXpress",
     "title": "Population colored by Gross National Income 2014"
   },
-  "events": false,
-  "info": false,
   "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
     [
       "groupSamples",
       [
@@ -1205,14 +1195,5 @@
       {},
       1568255494577
     ]
-  ],
-  "client": "MTU2ODI1NTQ5MjIwODo6MTo6MjUuMTo6",
-  "clientIP": {
-    "country": null,
-    "continent": null,
-    "postal": null,
-    "city": null,
-    "latitude": null,
-    "longitude": null
-  }
+  ]
 }

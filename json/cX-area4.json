@@ -976,26 +976,5 @@
     "title": "Age distribution of population in the United State",
     "xAxis2Show": false,
     "xAxisTitle": "Number of People (1000's)"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NDY0Mzk5NTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "longitude": null,
-    "city": null,
-    "postal": null,
-    "country": null,
-    "latitude": null,
-    "continent": null
   }
 }

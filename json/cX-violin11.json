@@ -360,17 +360,7 @@
     "xAxisTickColor": "white",
     "xAxisTitle": "len"
   },
-  "events": false,
-  "info": false,
   "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
     [
       "switchNumericToString",
       [
@@ -380,14 +370,5 @@
       {},
       1568254831842
     ]
-  ],
-  "client": "MTU2ODI1NDgzMTcxMjo6MTo6MjUuMTo6",
-  "clientIP": {
-    "city": null,
-    "continent": null,
-    "postal": null,
-    "latitude": null,
-    "longitude": null,
-    "country": null
-  }
+  ]
 }

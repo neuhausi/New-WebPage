@@ -60,26 +60,5 @@
     "marginRight": 20,
     "title": "Diverging Stacked Graph",
     "xAxisTickFormat": "%s%%"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTQwOTkyOTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "latitude": null,
-    "postal": null,
-    "longitude": null,
-    "country": null,
-    "continent": null,
-    "city": null
   }
 }

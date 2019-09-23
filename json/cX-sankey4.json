@@ -259,26 +259,5 @@
     "sankeySource": "Source",
     "sankeyTarget": "Target",
     "title": "Multilevel Sankey"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTMxMDE4NTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "city": null,
-    "continent": null,
-    "latitude": null,
-    "postal": null,
-    "country": null,
-    "longitude": null
   }
 }

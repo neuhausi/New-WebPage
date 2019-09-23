@@ -221,14 +221,6 @@
   "info": false,
   "afterRender": [
     [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
-    [
       "segregate",
       [
         "Variables",
@@ -241,14 +233,5 @@
       {},
       1568255292367
     ]
-  ],
-  "client": "MTU2ODI1NTI5MjEyMzo6MTo6MjUuMTo6",
-  "clientIP": {
-    "country": null,
-    "continent": null,
-    "city": null,
-    "postal": null,
-    "longitude": null,
-    "latitude": null
-  }
+  ]
 }

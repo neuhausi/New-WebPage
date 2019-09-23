@@ -159,26 +159,5 @@
     "title": "Radar - Stacked",
     "transitionStep": 50,
     "transitionTime": 1500
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTI2OTg1MTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "country": null,
-    "latitude": null,
-    "continent": null,
-    "city": null,
-    "postal": null,
-    "longitude": null
   }
 }

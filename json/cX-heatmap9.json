@@ -1415,26 +1415,5 @@
       "Sens"
     ],
     "variablesClustered": true
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTExMzcyNzo6MTo6MjUuMTo6",
-  "clientIP": {
-    "longitude": null,
-    "postal": null,
-    "city": null,
-    "latitude": null,
-    "country": null,
-    "continent": null
   }
 }

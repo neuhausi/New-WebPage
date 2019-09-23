@@ -217,26 +217,5 @@
     "theme": "CanvasXpress",
     "title": "Tumor Response with Duration by Stage and Month",
     "xAxisTitle": "Duration of Treatment in Months"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NDY3Nzk2OTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "continent": null,
-    "postal": null,
-    "longitude": null,
-    "latitude": null,
-    "country": null,
-    "city": null
   }
 }

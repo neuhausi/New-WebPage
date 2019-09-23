@@ -32,26 +32,5 @@
     "graphType": "Venn",
     "showTransition": true,
     "vennGroups": 4
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTUxMDg2Njo6MTo6MjUuMTo6",
-  "clientIP": {
-    "city": null,
-    "country": null,
-    "continent": null,
-    "longitude": null,
-    "postal": null,
-    "latitude": null
   }
 }

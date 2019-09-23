@@ -3998,26 +3998,5 @@
     ],
     "showIdeogram": true,
     "title": "Custom radi for Chromosomes and Custom Plotting Order"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NDg5NjQ1MTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "postal": null,
-    "latitude": null,
-    "longitude": null,
-    "country": null,
-    "continent": null,
-    "city": null
   }
 }

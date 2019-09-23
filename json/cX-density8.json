@@ -1431,38 +1431,5 @@
     "xAxisHistogramShow": true,
     "yAxisHistogramHeight": 150,
     "yAxisHistogramShow": true
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
-    [
-      "drawRangesAfterWheelEvent",
-      [
-        null,
-        null,
-        null,
-        null,
-        0
-      ],
-      {},
-      1568254948077
-    ]
-  ],
-  "client": "MTU2ODI1NDk0MzIyMjo6MTo6MjUuMTo6",
-  "clientIP": {
-    "latitude": null,
-    "country": null,
-    "postal": null,
-    "continent": null,
-    "longitude": null,
-    "city": null
   }
 }

@@ -5595,32 +5595,5 @@
     "showVariableNames": false,
     "subtitle": "datasets - volcano",
     "title": "Topographic Information on Auckland's Maunga Whau Volcano"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
-    [
-      "createContour",
-      [],
-      {},
-      1568254914815
-    ]
-  ],
-  "client": "MTU2ODI1NDkxMzk5ODo6MTo6MjUuMTo6",
-  "clientIP": {
-    "postal": null,
-    "country": null,
-    "continent": null,
-    "longitude": null,
-    "city": null,
-    "latitude": null
   }
 }

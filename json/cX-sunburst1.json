@@ -128,26 +128,5 @@
     ],
     "showTransition": true,
     "title": "Simple Sunburst"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTQ3MDc0Nzo6MTo6MjUuMTo6",
-  "clientIP": {
-    "latitude": null,
-    "city": null,
-    "postal": null,
-    "longitude": null,
-    "continent": null,
-    "country": null
   }
 }

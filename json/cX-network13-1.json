@@ -5912,26 +5912,5 @@
     "moveParentsWithChildren": true,
     "ignoreEventlessOrder": true,
     "skipRender": false
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTE2OTk3NTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "city": null,
-    "longitude": null,
-    "postal": null,
-    "latitude": null,
-    "continent": null,
-    "country": null
   }
 }

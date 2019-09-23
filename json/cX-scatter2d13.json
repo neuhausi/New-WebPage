@@ -7077,26 +7077,5 @@
       "logFC-Y"
     ],
     "yAxisTickColor": "rgb(255,255,255)"
-  },
-  "events": false,
-  "info": false,
-  "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ]
-  ],
-  "client": "MTU2ODI1NTMyOTA3OTo6MTo6MjUuMTo6",
-  "clientIP": {
-    "continent": null,
-    "longitude": null,
-    "postal": null,
-    "country": null,
-    "city": null,
-    "latitude": null
   }
 }

@@ -1233,17 +1233,7 @@
     "theme": "CanvasXpress",
     "title": "Iris flower data set"
   },
-  "events": false,
-  "info": false,
   "afterRender": [
-    [
-      "setDimensions",
-      [
-        570,
-        570,
-        true
-      ]
-    ],
     [
       "switchAnnotationToSmp",
       [
@@ -1252,14 +1242,5 @@
       {},
       1568255211038
     ]
-  ],
-  "client": "MTU2ODI1NTIxMDYzNzo6MTo6MjUuMTo6",
-  "clientIP": {
-    "postal": null,
-    "city": null,
-    "country": null,
-    "longitude": null,
-    "continent": null,
-    "latitude": null
-  }
+  ]
 }
